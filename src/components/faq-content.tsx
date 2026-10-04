@@ -1,14 +1,14 @@
 "use client";
 
+import { WA_URL } from "@/lib/contacto";
 import { useState } from "react";
 import { motion, AnimatePresence, useInView } from "motion/react";
 import { useRef } from "react";
 import { Plus } from "lucide-react";
-import Link from "next/link";
 
 const ease = [0.23, 1, 0.32, 1] as const;
 
-const waLink = `https://wa.me/34667638293?text=${encodeURIComponent("Hola, tengo una pregunta sobre vuestros quesos.")}`;
+const waLink = `${WA_URL}?text=${encodeURIComponent("Hola, tengo una pregunta sobre vuestros quesos.")}`;
 
 const faqs = [
   {
@@ -21,7 +21,7 @@ const faqs = [
   },
   {
     q: "¿Qué diferencia hay entre El Consuelo, El Cordel y El Redil?",
-    a: "El Consuelo es nuestra línea principal, elaborada con leche de nuestra propia cabaña de 1.150 ovejas manchegas. El Cordel es nuestra gama premium con DOP Queso Manchego, con el curado más premiado —medalla de plata en el World Cheese Awards 2016. El Redil incluye quesos de cabra y mezcla para quienes buscan sabores distintos.",
+    a: "El Consuelo es nuestra línea principal, elaborada con leche de nuestra propia cabaña de 2.200 ovejas manchegas. El Cordel es nuestra gama premium con DOP Queso Manchego, con el curado más premiado —medalla de plata en el World Cheese Awards 2016. El Redil incluye quesos de cabra y mezcla para quienes buscan sabores distintos.",
   },
   {
     q: "¿Tenéis tienda física donde comprar?",
@@ -56,7 +56,7 @@ function FaqItem({ q, a, index }: { q: string; a: string; index: number }) {
       initial={{ transform: "translateY(16px)", opacity: 0 }}
       animate={inView ? { transform: "translateY(0px)", opacity: 1 } : {}}
       transition={{ duration: 0.5, delay: index * 0.06, ease }}
-      style={{ borderBottom: "1px solid rgba(193,125,60,0.18)" }}
+      style={{ borderBottom: "1px solid rgba(201,162,74,0.18)" }}
     >
       <button
         onClick={() => setOpen((v) => !v)}
@@ -66,10 +66,10 @@ function FaqItem({ q, a, index }: { q: string; a: string; index: number }) {
       >
         <span
           style={{
-            fontFamily: "var(--font-cormorant)",
+            fontFamily: "var(--font-display)",
             fontSize: "clamp(1.05rem, 2vw, 1.2rem)",
             fontWeight: 500,
-            color: open ? "#C17D3C" : "#231A0E",
+            color: open ? "var(--color-oro)" : "var(--color-verde)",
             lineHeight: 1.3,
             transition: "color 200ms",
           }}
@@ -81,7 +81,7 @@ function FaqItem({ q, a, index }: { q: string; a: string; index: number }) {
           transition={{ duration: 0.22, ease }}
           style={{
             flexShrink: 0,
-            color: open ? "#C17D3C" : "#8C7B6A",
+            color: open ? "var(--color-oro)" : "var(--color-gris)",
             display: "flex",
             transition: "color 200ms",
           }}
@@ -102,9 +102,9 @@ function FaqItem({ q, a, index }: { q: string; a: string; index: number }) {
             <p
               className="pb-6 pr-10"
               style={{
-                fontFamily: "var(--font-lora)",
+                fontFamily: "var(--font-body)",
                 fontSize: "0.9rem",
-                color: "#8C7B6A",
+                color: "var(--color-gris)",
                 lineHeight: 1.8,
               }}
             >
@@ -122,7 +122,7 @@ export default function FaqContent() {
   const headerInView = useInView(headerRef, { once: true, margin: "-60px" });
 
   return (
-    <section style={{ background: "#F7F0E3", padding: "80px 24px 100px" }}>
+    <section style={{ background: "var(--color-marmol)", padding: "80px 24px 100px" }}>
       <div className="max-w-2xl mx-auto">
         <motion.div
           ref={headerRef}
@@ -133,17 +133,17 @@ export default function FaqContent() {
         >
           <h1
             style={{
-              fontFamily: "var(--font-cormorant)",
+              fontFamily: "var(--font-display)",
               fontSize: "clamp(2.2rem, 5vw, 3.5rem)",
               fontWeight: 400,
               fontStyle: "italic",
-              color: "#231A0E",
+              color: "var(--color-verde)",
               marginBottom: "1rem",
             }}
           >
             Preguntas frecuentes
           </h1>
-          <p style={{ fontFamily: "var(--font-lora)", fontSize: "0.9rem", color: "#8C7B6A", lineHeight: 1.75 }}>
+          <p style={{ fontFamily: "var(--font-body)", fontSize: "0.9rem", color: "var(--color-gris)", lineHeight: 1.75 }}>
             Si no encuentras lo que buscas, escríbenos por WhatsApp y te respondemos en seguida.
           </p>
         </motion.div>
@@ -156,24 +156,25 @@ export default function FaqContent() {
 
         <motion.div
           initial={{ transform: "translateY(16px)", opacity: 0 }}
-          animate={{ transform: "translateY(0px)", opacity: 1 }}
+          whileInView={{ transform: "translateY(0px)", opacity: 1 }}
+          viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.5, delay: 0.5, ease }}
           className="mt-14 flex flex-col sm:flex-row items-center gap-4 p-8"
-          style={{ background: "#231A0E" }}
+          style={{ background: "var(--color-verde)" }}
         >
           <div className="flex-1">
             <p
               style={{
-                fontFamily: "var(--font-cormorant)",
+                fontFamily: "var(--font-display)",
                 fontSize: "1.4rem",
                 fontStyle: "italic",
-                color: "#F7F0E3",
+                color: "var(--color-marmol)",
                 marginBottom: "0.25rem",
               }}
             >
               ¿Tienes otra pregunta?
             </p>
-            <p style={{ fontFamily: "var(--font-lora)", fontSize: "0.8rem", color: "rgba(247,240,227,0.5)" }}>
+            <p style={{ fontFamily: "var(--font-body)", fontSize: "0.8rem", color: "rgba(243,242,238,0.5)" }}>
               Respondemos por WhatsApp en horario de trabajo.
             </p>
           </div>
@@ -183,9 +184,9 @@ export default function FaqContent() {
             rel="noopener noreferrer"
             className="flex-shrink-0 px-6 py-3 text-sm transition-opacity hover:opacity-90"
             style={{
-              background: "#25D366",
-              color: "#fff",
-              fontFamily: "var(--font-lora)",
+              background: "var(--color-oro)",
+              color: "var(--color-verde-hondo)",
+              fontFamily: "var(--font-body)",
               textDecoration: "none",
             }}
           >

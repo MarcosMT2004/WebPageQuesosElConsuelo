@@ -1,5 +1,6 @@
 "use client";
 
+import { WA_URL, TEL_HREF } from "@/lib/contacto";
 import { motion, useInView } from "motion/react";
 import { useRef } from "react";
 import { MapPin, Phone, MessageCircle } from "lucide-react";
@@ -15,11 +16,11 @@ export default function ContactoContent() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section style={{ background: "#F7F0E3" }}>
+    <section style={{ background: "var(--color-marmol)" }}>
       {/* Intro band */}
       <div
         className="px-6 py-16"
-        style={{ borderBottom: "1px solid rgba(193,125,60,0.15)" }}
+        style={{ borderBottom: "1px solid rgba(201,162,74,0.15)" }}
       >
         <div className="max-w-4xl mx-auto">
           <motion.h1
@@ -29,11 +30,11 @@ export default function ContactoContent() {
             transition={{ duration: 0.6, ease }}
             className="mb-4"
             style={{
-              fontFamily: "var(--font-cormorant)",
+              fontFamily: "var(--font-display)",
               fontSize: "clamp(2.2rem, 5vw, 3.5rem)",
               fontWeight: 400,
               fontStyle: "italic",
-              color: "#231A0E",
+              color: "var(--color-verde)",
             }}
           >
             Contáctanos
@@ -43,9 +44,9 @@ export default function ContactoContent() {
             animate={inView ? { transform: "translateY(0px)", opacity: 1 } : {}}
             transition={{ duration: 0.6, delay: 0.1, ease }}
             style={{
-              fontFamily: "var(--font-lora)",
+              fontFamily: "var(--font-body)",
               fontSize: "0.95rem",
-              color: "#8C7B6A",
+              color: "var(--color-gris)",
               lineHeight: 1.8,
               maxWidth: "44ch",
             }}
@@ -89,13 +90,13 @@ function ContactInfo() {
       {/* Address */}
       <div>
         <div className="flex items-start gap-3 mb-3">
-          <MapPin size={18} style={{ color: "#C17D3C", marginTop: 2, flexShrink: 0 }} />
+          <MapPin size={18} style={{ color: "var(--color-oro-tinta)", marginTop: 2, flexShrink: 0 }} />
           <h2
             style={{
-              fontFamily: "var(--font-cormorant)",
+              fontFamily: "var(--font-display)",
               fontSize: "1.3rem",
               fontStyle: "italic",
-              color: "#231A0E",
+              color: "var(--color-verde)",
             }}
           >
             Cómo llegar
@@ -103,7 +104,7 @@ function ContactInfo() {
         </div>
         <div
           className="pl-7 space-y-1"
-          style={{ fontFamily: "var(--font-lora)", fontSize: "0.875rem", color: "#8C7B6A", lineHeight: 1.75 }}
+          style={{ fontFamily: "var(--font-body)", fontSize: "0.875rem", color: "var(--color-gris)", lineHeight: 1.75 }}
         >
           <p>S.A.T. Cañada Real Soriana</p>
           <p>Ctra. Toledo-Alcázar de San Juan, km 69,200</p>
@@ -115,7 +116,7 @@ function ContactInfo() {
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 mt-4 ml-7 text-xs transition-opacity hover:opacity-70"
-          style={{ color: "#C17D3C", fontFamily: "var(--font-lora)", textDecoration: "none" }}
+          style={{ color: "var(--color-oro-tinta)", fontFamily: "var(--font-body)", textDecoration: "none" }}
         >
           Ver en Google Maps
           <span aria-hidden>↗</span>
@@ -125,31 +126,31 @@ function ContactInfo() {
       {/* Phones */}
       <div>
         <div className="flex items-start gap-3 mb-3">
-          <Phone size={18} style={{ color: "#C17D3C", marginTop: 2, flexShrink: 0 }} />
+          <Phone size={18} style={{ color: "var(--color-oro-tinta)", marginTop: 2, flexShrink: 0 }} />
           <h2
             style={{
-              fontFamily: "var(--font-cormorant)",
+              fontFamily: "var(--font-display)",
               fontSize: "1.3rem",
               fontStyle: "italic",
-              color: "#231A0E",
+              color: "var(--color-verde)",
             }}
           >
             Teléfonos
           </h2>
         </div>
-        <div className="pl-7 space-y-2" style={{ fontFamily: "var(--font-lora)", fontSize: "0.875rem" }}>
+        <div className="pl-7 space-y-2" style={{ fontFamily: "var(--font-body)", fontSize: "0.875rem" }}>
           <div className="flex items-center gap-3">
             <a
-              href="tel:+34667638293"
-              style={{ color: "#231A0E" }}
-              onMouseEnter={(e) => ((e.target as HTMLElement).style.color = "#C17D3C")}
-              onMouseLeave={(e) => ((e.target as HTMLElement).style.color = "#231A0E")}
+              href={TEL_HREF}
+              style={{ color: "var(--color-verde)" }}
+              onMouseEnter={(e) => ((e.target as HTMLElement).style.color = "var(--color-oro)")}
+              onMouseLeave={(e) => ((e.target as HTMLElement).style.color = "var(--color-verde)")}
             >
               +34 667 638 293
             </a>
             <span
               className="px-2 py-0.5 text-xs"
-              style={{ background: "#25D366", color: "#fff", fontSize: "0.6rem", letterSpacing: "0.05em" }}
+              style={{ background: "var(--color-oro)", color: "var(--color-verde-hondo)", fontSize: "0.6rem", letterSpacing: "0.05em" }}
             >
               WhatsApp
             </span>
@@ -157,9 +158,9 @@ function ContactInfo() {
           <div>
             <a
               href="tel:+34925462459"
-              style={{ color: "#231A0E" }}
-              onMouseEnter={(e) => ((e.target as HTMLElement).style.color = "#C17D3C")}
-              onMouseLeave={(e) => ((e.target as HTMLElement).style.color = "#231A0E")}
+              style={{ color: "var(--color-verde)" }}
+              onMouseEnter={(e) => ((e.target as HTMLElement).style.color = "var(--color-oro)")}
+              onMouseLeave={(e) => ((e.target as HTMLElement).style.color = "var(--color-verde)")}
             >
               +34 925 462 459
             </a>
@@ -170,13 +171,13 @@ function ContactInfo() {
       {/* WhatsApp */}
       <div>
         <div className="flex items-start gap-3 mb-3">
-          <MessageCircle size={18} style={{ color: "#C17D3C", marginTop: 2, flexShrink: 0 }} />
+          <MessageCircle size={18} style={{ color: "var(--color-oro-tinta)", marginTop: 2, flexShrink: 0 }} />
           <h2
             style={{
-              fontFamily: "var(--font-cormorant)",
+              fontFamily: "var(--font-display)",
               fontSize: "1.3rem",
               fontStyle: "italic",
-              color: "#231A0E",
+              color: "var(--color-verde)",
             }}
           >
             WhatsApp
@@ -184,19 +185,19 @@ function ContactInfo() {
         </div>
         <p
           className="pl-7 mb-4"
-          style={{ fontFamily: "var(--font-lora)", fontSize: "0.875rem", color: "#8C7B6A", lineHeight: 1.75 }}
+          style={{ fontFamily: "var(--font-body)", fontSize: "0.875rem", color: "var(--color-gris)", lineHeight: 1.75 }}
         >
           Para pedidos, preguntas y presupuestos. Es la forma más rápida de llegar a nosotros.
         </p>
         <a
-          href={`https://wa.me/34667638293?text=${waMessage}`}
+          href={`${WA_URL}?text=${waMessage}`}
           target="_blank"
           rel="noopener noreferrer"
           className="ml-7 inline-flex items-center gap-2 px-5 py-2.5 text-sm transition-opacity hover:opacity-90"
           style={{
-            background: "#25D366",
-            color: "#fff",
-            fontFamily: "var(--font-lora)",
+            background: "var(--color-oro)",
+            color: "var(--color-verde-hondo)",
+            fontFamily: "var(--font-body)",
             textDecoration: "none",
           }}
         >
@@ -225,7 +226,7 @@ function MapBlock() {
         className="overflow-hidden"
         style={{
           aspectRatio: "4/3",
-          border: "1px solid rgba(193,125,60,0.2)",
+          border: "1px solid rgba(201,162,74,0.2)",
         }}
       >
         <iframe
@@ -240,7 +241,7 @@ function MapBlock() {
       </div>
       <p
         className="mt-3 text-xs"
-        style={{ fontFamily: "var(--font-lora)", color: "#8C7B6A" }}
+        style={{ fontFamily: "var(--font-body)", color: "var(--color-gris)" }}
       >
         Madridejos, Toledo · A 80 km de Madrid por la A-4
       </p>
@@ -252,34 +253,34 @@ function WaCta() {
   return (
     <div
       className="px-6 py-14"
-      style={{ background: "#231A0E" }}
+      style={{ background: "var(--color-verde)" }}
     >
       <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
         <div>
           <p
             style={{
-              fontFamily: "var(--font-cormorant)",
+              fontFamily: "var(--font-display)",
               fontSize: "clamp(1.5rem, 3vw, 2.2rem)",
               fontStyle: "italic",
-              color: "#F7F0E3",
+              color: "var(--color-marmol)",
               marginBottom: "0.5rem",
             }}
           >
             ¿Listo para hacer un pedido?
           </p>
-          <p style={{ fontFamily: "var(--font-lora)", fontSize: "0.85rem", color: "rgba(247,240,227,0.5)" }}>
+          <p style={{ fontFamily: "var(--font-body)", fontSize: "0.85rem", color: "rgba(243,242,238,0.5)" }}>
             Escríbenos por WhatsApp. Respondemos en horario de trabajo.
           </p>
         </div>
         <a
-          href={`https://wa.me/34667638293?text=${waMessage}`}
+          href={`${WA_URL}?text=${waMessage}`}
           target="_blank"
           rel="noopener noreferrer"
           className="flex-shrink-0 flex items-center gap-2.5 px-7 py-3.5 text-sm transition-opacity hover:opacity-90"
           style={{
-            background: "#25D366",
-            color: "#fff",
-            fontFamily: "var(--font-lora)",
+            background: "var(--color-oro)",
+            color: "var(--color-verde-hondo)",
+            fontFamily: "var(--font-body)",
             textDecoration: "none",
           }}
         >

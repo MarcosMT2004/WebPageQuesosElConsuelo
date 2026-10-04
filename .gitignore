@@ -39,3 +39,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# graphify
+graphify-out/
+
+# impeccable: capturas y estado temporal
+.impeccable/review/
+.impeccable/questions/
+.impeccable/hook.cache.json

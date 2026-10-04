@@ -29,19 +29,19 @@ export default function ScrollToTop() {
           style={{
             width: 44,
             height: 44,
-            background: "rgba(35,26,14,0.88)",
-            color: "#F7F0E3",
-            border: "1px solid rgba(193,125,60,0.25)",
+            background: "rgba(31,59,45,0.88)",
+            color: "var(--color-marmol)",
+            border: "1px solid rgba(201,162,74,0.25)",
             backdropFilter: "blur(8px)",
             cursor: "pointer",
           }}
           onMouseEnter={(e) => {
-            (e.currentTarget as HTMLElement).style.background = "#231A0E";
-            (e.currentTarget as HTMLElement).style.borderColor = "rgba(193,125,60,0.5)";
+            (e.currentTarget as HTMLElement).style.background = "var(--color-verde)";
+            (e.currentTarget as HTMLElement).style.borderColor = "rgba(201,162,74,0.5)";
           }}
           onMouseLeave={(e) => {
-            (e.currentTarget as HTMLElement).style.background = "rgba(35,26,14,0.88)";
-            (e.currentTarget as HTMLElement).style.borderColor = "rgba(193,125,60,0.25)";
+            (e.currentTarget as HTMLElement).style.background = "rgba(31,59,45,0.88)";
+            (e.currentTarget as HTMLElement).style.borderColor = "rgba(201,162,74,0.25)";
           }}
         >
           <ChevronUp size={18} />

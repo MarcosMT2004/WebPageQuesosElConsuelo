@@ -2,130 +2,91 @@
 
 import { motion } from "motion/react";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { ChevronDown } from "lucide-react";
+import { ArrowDown } from "lucide-react";
+import NotaPedido from "@/components/nota-pedido";
 
 const ease = [0.23, 1, 0.32, 1] as const;
 
+// Moldura de madera pintada: filete dorado gastado dentro de un rebaje en sombra.
+const moldura =
+  "shadow-[inset_0_0_0_1px_rgba(201,162,74,0.35),inset_0_0_0_7px_var(--color-verde),inset_0_0_0_8px_rgba(0,0,0,0.28)]";
+
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background image */}
-      <Image
-        src="/images/hero-rebano.jpg"
-        alt="Rebaño de ovejas manchegas en los campos de La Mancha"
-        fill
-        priority
-        className="object-cover object-center"
-        sizes="100vw"
-      />
-      {/* Overlay */}
-      <div
-        className="absolute inset-0"
-        style={{
-          background:
-            "linear-gradient(to bottom, rgba(35,26,14,0.55) 0%, rgba(35,26,14,0.7) 60%, rgba(35,26,14,0.85) 100%)",
-        }}
-      />
-
-      {/* Content */}
-      <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
+    <section className="relative bg-verde pt-16 text-marmol">
+      <div className={`mx-auto max-w-7xl px-4 sm:px-6 pb-10 pt-6 lg:pt-8 ${moldura}`}>
+        {/* Rótulo */}
         <motion.div
-          initial={{ transform: "translateY(20px)", opacity: 0 }}
-          animate={{ transform: "translateY(0px)", opacity: 1 }}
-          transition={{ duration: 0.6, ease }}
+          initial={{ opacity: 0, filter: "brightness(0.55)" }}
+          animate={{ opacity: 1, filter: "brightness(1)" }}
+          transition={{ duration: 1.1, ease }}
+          className="border-[5px] border-double border-oro/80 bg-verde-hondo px-4 py-5 sm:py-6 text-center"
         >
-          <Badge
-            className="mb-6 text-xs tracking-widest uppercase px-4 py-1.5 border"
-            style={{
-              background: "transparent",
-              color: "#C17D3C",
-              borderColor: "#C17D3C",
-              fontFamily: "var(--font-lora)",
-            }}
-          >
-            Desde 1938 · DOP Manchego
-          </Badge>
+          <h1 className="font-display text-oro leading-[0.95] tracking-[-0.01em] [text-shadow:0_1px_0_#6b5216,0_3px_10px_rgba(0,0,0,0.45)]">
+            <span className="block text-[clamp(2.6rem,8.2vw,6rem)] font-semibold">Quesos El Consuelo</span>
+            <span className="mt-3 block font-label text-[clamp(0.85rem,1.6vw,1.15rem)] font-medium uppercase tracking-[0.28em] text-oro/85 [text-shadow:none]">
+              Queso manchego artesano · Madridejos, Toledo · desde 1938
+            </span>
+          </h1>
         </motion.div>
 
-        <motion.h1
-          initial={{ transform: "translateY(28px)", opacity: 0 }}
-          animate={{ transform: "translateY(0px)", opacity: 1 }}
-          transition={{ duration: 0.7, delay: 0.1, ease }}
-          style={{
-            fontFamily: "var(--font-cormorant)",
-            color: "#F7F0E3",
-            fontSize: "clamp(3rem, 8vw, 6rem)",
-            lineHeight: 1.05,
-            fontWeight: 400,
-            fontStyle: "italic",
-          }}
-        >
-          Queso manchego<br />artesanal de La Mancha
-        </motion.h1>
+        {/* Orden del DOM = orden en móvil: escaparate → nota → texto */}
+        <div className="mt-6 lg:mt-8 grid gap-8 lg:grid-cols-[1.35fr_1fr] lg:grid-rows-[auto_1fr] lg:items-start">
+          {/* Escaparate */}
+          <div className="lg:col-start-1">
+            <div className="relative bg-verde-hondo p-2 sm:p-2.5">
+              <div className="relative aspect-[4/3] sm:aspect-[2/1] overflow-hidden">
+                <Image
+                  src="/images/slide6.jpg"
+                  alt="Tres ruedas de queso manchego El Consuelo con cuñas cortadas sobre tabla de madera"
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 58vw"
+                  className="object-cover object-[50%_60%]"
+                />
+                {/* Junquillos del escaparate y reflejo del cristal */}
+                <div aria-hidden className="absolute inset-0 hidden sm:flex justify-evenly">
+                  <span className="w-1.5 bg-verde-hondo" />
+                  <span className="w-1.5 bg-verde-hondo" />
+                </div>
+                <div
+                  aria-hidden
+                  className="absolute inset-0 bg-[linear-gradient(115deg,transparent_55%,rgba(243,242,238,0.09)_62%,transparent_70%)]"
+                />
+              </div>
+              {/* Etiqueta esmaltada colgada del escaparate */}
+              <p className="absolute -bottom-4 left-5 sm:left-8 border-2 border-verde bg-marmol px-3 py-1 font-label text-[0.8rem] sm:text-[0.9rem] font-semibold uppercase tracking-[0.14em] text-verde shadow-[0_4px_10px_rgba(0,0,0,0.35)]">
+                Leche cruda · ovejas propias
+              </p>
+            </div>
+          </div>
 
-        <motion.p
-          initial={{ transform: "translateY(28px)", opacity: 0 }}
-          animate={{ transform: "translateY(0px)", opacity: 1 }}
-          transition={{ duration: 0.7, delay: 0.2, ease }}
-          className="mt-6 text-lg max-w-xl mx-auto leading-relaxed"
-          style={{ color: "rgba(247,240,227,0.8)", fontFamily: "var(--font-lora)" }}
-        >
-          Queso manchego artesanal. De nuestras ovejas a tu mesa, con el mismo
-          cuidado de siempre.
-        </motion.p>
+          {/* Nota de pedido */}
+          <motion.div
+            initial={{ opacity: 0, transform: "translateY(24px) rotate(0.6deg)" }}
+            animate={{ opacity: 1, transform: "translateY(0px) rotate(0.6deg)" }}
+            transition={{ duration: 0.7, delay: 0.35, ease }}
+            className="lg:col-start-2 lg:row-start-1 lg:row-span-2 lg:-mt-2"
+          >
+            <NotaPedido />
+          </motion.div>
 
-        <motion.div
-          initial={{ transform: "translateY(20px)", opacity: 0 }}
-          animate={{ transform: "translateY(0px)", opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.35, ease }}
-          className="mt-10 flex flex-col sm:flex-row gap-4 justify-center"
-        >
-          <Button
-            size="lg"
-            asChild
-            style={{
-              background: "#C17D3C",
-              color: "#F7F0E3",
-              fontFamily: "var(--font-lora)",
-              fontSize: "0.95rem",
-              padding: "0.75rem 2rem",
-            }}
-            className="hover:opacity-90 transition-opacity"
-          >
-            <a href="#quesos">Descubre nuestros quesos</a>
-          </Button>
-          <Button
-            size="lg"
-            variant="outline"
-            asChild
-            style={{
-              background: "transparent",
-              color: "#F7F0E3",
-              borderColor: "rgba(247,240,227,0.5)",
-              fontFamily: "var(--font-lora)",
-              fontSize: "0.95rem",
-            }}
-            className="hover:bg-white/10 transition-colors"
-          >
-            <a href="#historia">Nuestra historia</a>
-          </Button>
-        </motion.div>
+          <div className="lg:col-start-1 lg:row-start-2">
+            <p className="lg:mt-4 max-w-[56ch] text-[1.05rem] leading-relaxed text-marmol/85">
+              Hacemos el queso con la leche de nuestro propio rebaño de ovejas manchegas, sin
+              intermediarios. Apunta lo que quieres en la nota y nos llega por WhatsApp: te
+              contestamos nosotros, desde la quesería.
+            </p>
+            <a
+              href="#quesos"
+              className="mt-5 inline-flex items-center gap-2 font-label text-[1.05rem] font-semibold uppercase tracking-[0.1em] text-oro underline decoration-oro/40 underline-offset-[6px] hover:decoration-oro transition-colors"
+            >
+              Ver los tres quesos
+              <ArrowDown size={17} />
+            </a>
+          </div>
+        </div>
       </div>
-
-      {/* Scroll indicator */}
-      <motion.a
-        href="#historia"
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
-        aria-label="Desplázate hacia abajo"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.8, duration: 0.5, ease }}
-        style={{ color: "rgba(247,240,227,0.6)" }}
-      >
-        <ChevronDown size={28} strokeWidth={1.5} className="animate-bounce" />
-      </motion.a>
     </section>
   );
 }

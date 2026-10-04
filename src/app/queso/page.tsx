@@ -20,7 +20,7 @@ export default function QuesoPage() {
   return (
     <main>
       <Nav />
-      <Breadcrumb items={[{ label: "El Queso" }]} />
+      <Breadcrumb items={[{ label: "El Manchego" }]} />
       <QuesoContent />
       <Footer />
     </main>

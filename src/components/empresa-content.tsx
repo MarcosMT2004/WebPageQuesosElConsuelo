@@ -1,5 +1,6 @@
 "use client";
 
+import { TEL_HREF } from "@/lib/contacto";
 import { motion, useInView } from "motion/react";
 import { useRef } from "react";
 import Image from "next/image";
@@ -11,7 +12,7 @@ const ease = [0.23, 1, 0.32, 1] as const;
 const FUNDACION = 1938;
 
 const stats = [
-  { value: "1.150", label: "ovejas manchegas" },
+  { value: "2.200", label: "ovejas manchegas" },
   { value: `${new Date().getFullYear() - FUNDACION}+`, label: "años de historia" },
   { value: "3", label: "artesanos" },
   { value: "Toledo", label: "Madridejos" },
@@ -62,26 +63,17 @@ export default function EmpresaContent() {
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(to bottom, rgba(35,26,14,0.35) 0%, rgba(35,26,14,0.75) 70%, rgba(35,26,14,0.9) 100%)",
+              "linear-gradient(to bottom, rgba(31,59,45,0.35) 0%, rgba(31,59,45,0.75) 70%, rgba(31,59,45,0.9) 100%)",
           }}
         />
         <div className="relative z-10 max-w-6xl mx-auto w-full px-6 pb-16 pt-32">
-          <motion.p
-            initial={{ transform: "translateY(20px)", opacity: 0 }}
-            animate={{ transform: "translateY(0px)", opacity: 1 }}
-            transition={{ duration: 0.6, ease }}
-            className="text-xs tracking-widest uppercase mb-4"
-            style={{ color: "#C17D3C", fontFamily: "var(--font-lora)" }}
-          >
-            La Empresa
-          </motion.p>
           <motion.h1
             initial={{ transform: "translateY(28px)", opacity: 0 }}
             animate={{ transform: "translateY(0px)", opacity: 1 }}
             transition={{ duration: 0.7, delay: 0.1, ease }}
             style={{
-              fontFamily: "var(--font-cormorant)",
-              color: "#F7F0E3",
+              fontFamily: "var(--font-display)",
+              color: "var(--color-marmol)",
               fontSize: "clamp(2.4rem, 5vw, 4.5rem)",
               lineHeight: 1.05,
               fontWeight: 400,
@@ -98,28 +90,19 @@ export default function EmpresaContent() {
       <section
         ref={histRef}
         className="py-24 lg:py-32 px-6"
-        style={{ background: "#F7F0E3" }}
+        style={{ background: "var(--color-marmol)" }}
       >
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <div>
-              <motion.p
-                initial={{ transform: "translateY(20px)", opacity: 0 }}
-                animate={histInView ? { transform: "translateY(0px)", opacity: 1 } : {}}
-                transition={{ duration: 0.6, ease }}
-                className="text-xs tracking-widest uppercase mb-4"
-                style={{ color: "#C17D3C", fontFamily: "var(--font-lora)" }}
-              >
-                Nuestra historia
-              </motion.p>
               <motion.h2
                 initial={{ transform: "translateY(24px)", opacity: 0 }}
                 animate={histInView ? { transform: "translateY(0px)", opacity: 1 } : {}}
                 transition={{ duration: 0.7, delay: 0.08, ease }}
                 style={{
-                  fontFamily: "var(--font-cormorant)",
+                  fontFamily: "var(--font-display)",
                   fontSize: "clamp(2rem, 3.5vw, 3rem)",
-                  color: "#231A0E",
+                  color: "var(--color-verde)",
                   fontWeight: 400,
                   lineHeight: 1.15,
                   marginBottom: "2.5rem",
@@ -140,9 +123,9 @@ export default function EmpresaContent() {
                     <div className="flex-shrink-0 pt-1">
                       <span
                         style={{
-                          fontFamily: "var(--font-cormorant)",
+                          fontFamily: "var(--font-display)",
                           fontSize: "1.5rem",
-                          color: "#C17D3C",
+                          color: "var(--color-oro-tinta)",
                           fontWeight: 600,
                           fontStyle: "italic",
                           lineHeight: 1,
@@ -155,9 +138,9 @@ export default function EmpresaContent() {
                       <h3
                         className="mb-2"
                         style={{
-                          fontFamily: "var(--font-cormorant)",
+                          fontFamily: "var(--font-display)",
                           fontSize: "1.3rem",
-                          color: "#231A0E",
+                          color: "var(--color-verde)",
                           fontWeight: 500,
                         }}
                       >
@@ -165,7 +148,7 @@ export default function EmpresaContent() {
                       </h3>
                       <p
                         className="leading-relaxed"
-                        style={{ color: "#5a3f25", fontFamily: "var(--font-lora)", fontSize: "0.9rem" }}
+                        style={{ color: "var(--color-tinta)", fontFamily: "var(--font-body)", fontSize: "0.9rem" }}
                       >
                         {h.text}
                       </p>
@@ -191,7 +174,7 @@ export default function EmpresaContent() {
               />
               <div
                 className="absolute inset-0 pointer-events-none"
-                style={{ border: "1px solid rgba(193,125,60,0.3)", margin: "12px" }}
+                style={{ border: "1px solid rgba(201,162,74,0.3)", margin: "12px" }}
               />
             </motion.div>
           </div>
@@ -202,7 +185,7 @@ export default function EmpresaContent() {
       <section
         ref={statsRef}
         className="py-16 px-6"
-        style={{ background: "#231A0E" }}
+        style={{ background: "var(--color-verde)" }}
       >
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -216,9 +199,9 @@ export default function EmpresaContent() {
               >
                 <p
                   style={{
-                    fontFamily: "var(--font-cormorant)",
+                    fontFamily: "var(--font-display)",
                     fontSize: "clamp(2rem, 4vw, 3rem)",
-                    color: "#C17D3C",
+                    color: "var(--color-oro)",
                     fontWeight: 400,
                     lineHeight: 1,
                     fontStyle: "italic",
@@ -228,7 +211,7 @@ export default function EmpresaContent() {
                 </p>
                 <p
                   className="mt-2 text-xs tracking-widest uppercase"
-                  style={{ color: "rgba(247,240,227,0.6)", fontFamily: "var(--font-lora)" }}
+                  style={{ color: "rgba(243,242,238,0.6)", fontFamily: "var(--font-body)" }}
                 >
                   {s.label}
                 </p>
@@ -242,7 +225,7 @@ export default function EmpresaContent() {
       <section
         ref={granjRef}
         className="py-24 lg:py-32 px-6"
-        style={{ background: "#efe8d8" }}
+        style={{ background: "var(--color-azulejo)" }}
       >
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
           <motion.div
@@ -250,18 +233,12 @@ export default function EmpresaContent() {
             animate={granjInView ? { transform: "translateX(0px)", opacity: 1 } : {}}
             transition={{ duration: 0.7, ease }}
           >
-            <p
-              className="text-xs tracking-widest uppercase mb-4"
-              style={{ color: "#C17D3C", fontFamily: "var(--font-lora)" }}
-            >
-              La explotación
-            </p>
             <h2
               className="mb-6"
               style={{
-                fontFamily: "var(--font-cormorant)",
+                fontFamily: "var(--font-display)",
                 fontSize: "clamp(1.8rem, 3vw, 2.6rem)",
-                color: "#231A0E",
+                color: "var(--color-verde)",
                 fontWeight: 400,
                 lineHeight: 1.2,
               }}
@@ -270,10 +247,10 @@ export default function EmpresaContent() {
             </h2>
             <div
               className="space-y-4"
-              style={{ color: "#5a3f25", fontFamily: "var(--font-lora)", fontSize: "0.92rem", lineHeight: 1.75 }}
+              style={{ color: "var(--color-tinta)", fontFamily: "var(--font-body)", fontSize: "0.92rem", lineHeight: 1.75 }}
             >
               <p>
-                La explotación trabaja con un sistema de semi-estabulación. El rebaño lo forman 1.150 ovejas reproductoras de raza manchega y 21 machos. La producción media es de entre 250 y 260 litros por oveja en cada lactación de 120 días.
+                La explotación trabaja con un sistema de semi-estabulación. El rebaño lo forman 2.200 ovejas de raza manchega. La producción media es de entre 250 y 260 litros por oveja en cada lactación de 120 días.
               </p>
               <p>
                 Se realizan controles lecheros exhaustivos e inseminación artificial para mejorar progresivamente la raza. La quesería está adscrita a la Denominación de Origen Protegida Queso Manchego, lo que exige que toda la leche empleada cumpla los estándares del Consejo Regulador.
@@ -291,40 +268,40 @@ export default function EmpresaContent() {
           >
             <div
               className="p-8 lg:p-10"
-              style={{ background: "#F7F0E3", border: "1px solid rgba(193,125,60,0.2)" }}
+              style={{ background: "var(--color-marmol)", border: "1px solid rgba(201,162,74,0.2)" }}
             >
               <p
                 className="text-xs tracking-widest uppercase mb-6"
-                style={{ color: "#C17D3C", fontFamily: "var(--font-lora)" }}
+                style={{ color: "var(--color-oro-tinta)", fontFamily: "var(--font-body)" }}
               >
                 Dónde estamos
               </p>
               <address
                 className="not-italic"
-                style={{ fontFamily: "var(--font-cormorant)", fontSize: "1.2rem", color: "#231A0E", lineHeight: 1.6 }}
+                style={{ fontFamily: "var(--font-display)", fontSize: "1.2rem", color: "var(--color-verde)", lineHeight: 1.6 }}
               >
                 Ctra. Toledo–Alcázar de San Juan<br />
                 km 69,200<br />
                 Madridejos, Toledo
               </address>
-              <div className="mt-6 pt-6" style={{ borderTop: "1px solid rgba(193,125,60,0.15)" }}>
+              <div className="mt-6 pt-6" style={{ borderTop: "1px solid rgba(201,162,74,0.15)" }}>
                 <p
                   className="text-xs tracking-widest uppercase mb-3"
-                  style={{ color: "#8C7B6A", fontFamily: "var(--font-lora)" }}
+                  style={{ color: "var(--color-gris)", fontFamily: "var(--font-body)" }}
                 >
                   Contacto
                 </p>
                 <a
-                  href="tel:+34667638293"
+                  href={TEL_HREF}
                   className="block"
-                  style={{ color: "#231A0E", fontFamily: "var(--font-lora)", fontSize: "0.9rem" }}
+                  style={{ color: "var(--color-verde)", fontFamily: "var(--font-body)", fontSize: "0.9rem" }}
                 >
                   +34 667 638 293
                 </a>
                 <a
                   href="tel:+34925462459"
                   className="block mt-1"
-                  style={{ color: "#231A0E", fontFamily: "var(--font-lora)", fontSize: "0.9rem" }}
+                  style={{ color: "var(--color-verde)", fontFamily: "var(--font-body)", fontSize: "0.9rem" }}
                 >
                   +34 925 462 459
                 </a>
@@ -338,7 +315,7 @@ export default function EmpresaContent() {
       <section
         ref={premRef}
         className="py-24 px-6"
-        style={{ background: "#F7F0E3" }}
+        style={{ background: "var(--color-marmol)" }}
       >
         <div className="max-w-6xl mx-auto">
           <motion.div
@@ -347,21 +324,15 @@ export default function EmpresaContent() {
             transition={{ duration: 0.6, ease }}
             className="text-center mb-16"
           >
-            <p
-              className="text-xs tracking-widest uppercase mb-4"
-              style={{ color: "#C17D3C", fontFamily: "var(--font-lora)" }}
-            >
-              Reconocimientos
-            </p>
             <h2
               style={{
-                fontFamily: "var(--font-cormorant)",
+                fontFamily: "var(--font-display)",
                 fontSize: "clamp(2rem, 3.5vw, 3rem)",
-                color: "#231A0E",
+                color: "var(--color-verde)",
                 fontWeight: 400,
               }}
             >
-              Premiados en los mejores certámenes
+              Premios
             </h2>
           </motion.div>
 
@@ -371,7 +342,7 @@ export default function EmpresaContent() {
                 title: "Medalla de Plata",
                 event: "World Cheese Awards",
                 year: "2016",
-                desc: "El Cordel DOP reconocido entre los mejores quesos del mundo en el certamen internacional más prestigioso del sector.",
+                desc: "Medalla de Plata para El Cordel DOP en los World Cheese Awards 2016.",
               },
               {
                 title: "Medallas de Oro",
@@ -386,27 +357,27 @@ export default function EmpresaContent() {
                 animate={premInView ? { transform: "translateY(0px)", opacity: 1 } : {}}
                 transition={{ duration: 0.6, delay: 0.1 + i * 0.1, ease }}
                 className="p-8"
-                style={{ border: "1px solid rgba(193,125,60,0.25)", background: "#efe8d8" }}
+                style={{ border: "1px solid rgba(201,162,74,0.25)", background: "var(--color-azulejo)" }}
               >
                 <p
                   className="text-xs tracking-widest uppercase mb-2"
-                  style={{ color: "#C17D3C", fontFamily: "var(--font-lora)" }}
+                  style={{ color: "var(--color-oro-tinta)", fontFamily: "var(--font-body)" }}
                 >
                   {p.event} · {p.year}
                 </p>
                 <h3
                   className="mb-3"
                   style={{
-                    fontFamily: "var(--font-cormorant)",
+                    fontFamily: "var(--font-display)",
                     fontSize: "1.6rem",
-                    color: "#231A0E",
+                    color: "var(--color-verde)",
                     fontWeight: 400,
                   }}
                 >
                   {p.title}
                 </h3>
                 <p
-                  style={{ color: "#5a3f25", fontFamily: "var(--font-lora)", fontSize: "0.88rem", lineHeight: 1.7 }}
+                  style={{ color: "var(--color-tinta)", fontFamily: "var(--font-body)", fontSize: "0.88rem", lineHeight: 1.7 }}
                 >
                   {p.desc}
                 </p>
@@ -419,21 +390,15 @@ export default function EmpresaContent() {
       {/* CTA */}
       <section
         className="py-24 px-6 text-center"
-        style={{ background: "#231A0E" }}
+        style={{ background: "var(--color-verde)" }}
       >
         <div className="max-w-2xl mx-auto">
-          <p
-            className="text-xs tracking-widest uppercase mb-6"
-            style={{ color: "#C17D3C", fontFamily: "var(--font-lora)" }}
-          >
-            Nuestros quesos
-          </p>
           <h2
             className="mb-8"
             style={{
-              fontFamily: "var(--font-cormorant)",
+              fontFamily: "var(--font-display)",
               fontSize: "clamp(2rem, 4vw, 3rem)",
-              color: "#F7F0E3",
+              color: "var(--color-marmol)",
               fontWeight: 400,
               fontStyle: "italic",
             }}
@@ -444,7 +409,7 @@ export default function EmpresaContent() {
             <Button
               asChild
               size="lg"
-              style={{ background: "#C17D3C", color: "#F7F0E3", fontFamily: "var(--font-lora)" }}
+              style={{ background: "var(--color-oro)", color: "var(--color-verde-hondo)", fontFamily: "var(--font-body)" }}
               className="hover:opacity-90 transition-opacity"
             >
               <Link href="/quesos/el-cordel">El Cordel DOP</Link>
@@ -453,7 +418,7 @@ export default function EmpresaContent() {
               asChild
               size="lg"
               variant="outline"
-              style={{ background: "transparent", color: "#F7F0E3", borderColor: "rgba(247,240,227,0.4)", fontFamily: "var(--font-lora)" }}
+              style={{ background: "transparent", color: "var(--color-marmol)", borderColor: "rgba(243,242,238,0.4)", fontFamily: "var(--font-body)" }}
               className="hover:bg-white/10 transition-colors"
             >
               <Link href="/elaboracion">Cómo los elaboramos</Link>

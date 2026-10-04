@@ -60,26 +60,17 @@ export default function QuesosIndexContent() {
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(to bottom, rgba(35,26,14,0.25) 0%, rgba(35,26,14,0.65) 55%, rgba(35,26,14,0.92) 100%)",
+              "linear-gradient(to bottom, rgba(31,59,45,0.25) 0%, rgba(31,59,45,0.65) 55%, rgba(31,59,45,0.92) 100%)",
           }}
         />
         <div className="relative z-10 max-w-6xl mx-auto w-full px-6 pb-16 pt-32">
-          <motion.p
-            initial={{ transform: "translateY(20px)", opacity: 0 }}
-            animate={{ transform: "translateY(0px)", opacity: 1 }}
-            transition={{ duration: 0.6, ease }}
-            className="text-xs tracking-widest uppercase mb-4"
-            style={{ color: "#C17D3C", fontFamily: "var(--font-lora)" }}
-          >
-            Nuestros Quesos
-          </motion.p>
           <motion.h1
             initial={{ transform: "translateY(28px)", opacity: 0 }}
             animate={{ transform: "translateY(0px)", opacity: 1 }}
             transition={{ duration: 0.7, delay: 0.1, ease }}
             style={{
-              fontFamily: "var(--font-cormorant)",
-              color: "#F7F0E3",
+              fontFamily: "var(--font-display)",
+              color: "var(--color-marmol)",
               fontSize: "clamp(2.4rem, 5vw, 4.5rem)",
               lineHeight: 1.05,
               fontWeight: 400,
@@ -93,16 +84,16 @@ export default function QuesosIndexContent() {
       </section>
 
       {/* Intro */}
-      <section className="py-16 px-6" style={{ background: "#F7F0E3" }}>
+      <section className="py-16 px-6" style={{ background: "var(--color-marmol)" }}>
         <div className="max-w-2xl mx-auto text-center">
           <motion.p
             initial={{ transform: "translateY(20px)", opacity: 0 }}
             animate={{ transform: "translateY(0px)", opacity: 1 }}
             transition={{ duration: 0.7, delay: 0.2, ease }}
             style={{
-              fontFamily: "var(--font-lora)",
+              fontFamily: "var(--font-body)",
               fontSize: "0.95rem",
-              color: "#5a3f25",
+              color: "var(--color-tinta)",
               lineHeight: 1.8,
             }}
           >
@@ -115,7 +106,7 @@ export default function QuesosIndexContent() {
       <section
         ref={lineasRef}
         className="py-24 lg:py-32 px-6"
-        style={{ background: "#efe8d8" }}
+        style={{ background: "var(--color-azulejo)" }}
       >
         <div className="max-w-6xl mx-auto space-y-8">
           {lineas.map((linea, i) => (
@@ -126,8 +117,8 @@ export default function QuesosIndexContent() {
               transition={{ duration: 0.65, delay: i * 0.1, ease }}
               className="grid md:grid-cols-2 overflow-hidden group"
               style={{
-                border: linea.destacado ? "1px solid #C17D3C" : "1px solid rgba(193,125,60,0.2)",
-                background: "#F7F0E3",
+                border: linea.destacado ? "1px solid var(--color-oro)" : "1px solid rgba(201,162,74,0.2)",
+                background: "var(--color-marmol)",
               }}
             >
               {/* Imagen */}
@@ -146,9 +137,9 @@ export default function QuesosIndexContent() {
                   <div
                     className="absolute top-4 left-4 px-3 py-1 text-xs tracking-widest uppercase"
                     style={{
-                      background: "#C17D3C",
-                      color: "#F7F0E3",
-                      fontFamily: "var(--font-lora)",
+                      background: "var(--color-oro)",
+                      color: "var(--color-verde-hondo)",
+                      fontFamily: "var(--font-body)",
                       fontSize: "0.6rem",
                       letterSpacing: "0.1em",
                     }}
@@ -173,9 +164,9 @@ export default function QuesosIndexContent() {
                 <h2
                   className="mb-4"
                   style={{
-                    fontFamily: "var(--font-cormorant)",
+                    fontFamily: "var(--font-display)",
                     fontSize: "clamp(1.8rem, 3vw, 2.4rem)",
-                    color: "#231A0E",
+                    color: "var(--color-verde)",
                     fontWeight: 400,
                   }}
                 >
@@ -185,8 +176,8 @@ export default function QuesosIndexContent() {
                 <p
                   className="mb-6"
                   style={{
-                    color: "#5a3f25",
-                    fontFamily: "var(--font-lora)",
+                    color: "var(--color-tinta)",
+                    fontFamily: "var(--font-body)",
                     fontSize: "0.9rem",
                     lineHeight: 1.75,
                   }}
@@ -200,10 +191,10 @@ export default function QuesosIndexContent() {
                       key={v}
                       className="text-xs px-2.5 py-1"
                       style={{
-                        background: "rgba(193,125,60,0.1)",
-                        color: "#7A3B28",
-                        fontFamily: "var(--font-lora)",
-                        border: "1px solid rgba(193,125,60,0.22)",
+                        background: "rgba(201,162,74,0.1)",
+                        color: "var(--color-cordel)",
+                        fontFamily: "var(--font-body)",
+                        border: "1px solid rgba(201,162,74,0.22)",
                       }}
                     >
                       {v}
@@ -214,9 +205,9 @@ export default function QuesosIndexContent() {
                 <Link
                   href={linea.href}
                   className="inline-flex items-center gap-2 text-sm font-medium group/link w-fit"
-                  style={{ color: "#C17D3C", fontFamily: "var(--font-lora)", transition: "color 150ms" }}
-                  onMouseEnter={(e) => (e.currentTarget.style.color = "#7A3B28")}
-                  onMouseLeave={(e) => (e.currentTarget.style.color = "#C17D3C")}
+                  style={{ color: "var(--color-oro-tinta)", fontFamily: "var(--font-body)", transition: "color 150ms" }}
+                  onMouseEnter={(e) => (e.currentTarget.style.color = "var(--color-cordel)")}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = "var(--color-oro)")}
                 >
                   Ver {linea.nombre}
                   <ArrowUpRight
@@ -232,20 +223,14 @@ export default function QuesosIndexContent() {
       </section>
 
       {/* CTA contacto */}
-      <section className="py-20 px-6 text-center" style={{ background: "#231A0E" }}>
+      <section className="py-20 px-6 text-center" style={{ background: "var(--color-verde)" }}>
         <div className="max-w-xl mx-auto">
-          <p
-            className="text-xs tracking-widest uppercase mb-4"
-            style={{ color: "#C17D3C", fontFamily: "var(--font-lora)" }}
-          >
-            ¿Tienes dudas?
-          </p>
           <h2
             className="mb-8"
             style={{
-              fontFamily: "var(--font-cormorant)",
+              fontFamily: "var(--font-display)",
               fontSize: "clamp(1.8rem, 3.5vw, 3rem)",
-              color: "#F7F0E3",
+              color: "var(--color-marmol)",
               fontWeight: 400,
               fontStyle: "italic",
             }}
@@ -255,7 +240,7 @@ export default function QuesosIndexContent() {
           <Button
             asChild
             size="lg"
-            style={{ background: "#C17D3C", color: "#F7F0E3", fontFamily: "var(--font-lora)" }}
+            style={{ background: "var(--color-oro)", color: "var(--color-verde-hondo)", fontFamily: "var(--font-body)" }}
             className="hover:opacity-90 transition-opacity"
           >
             <Link href="/#contacto">Contactar</Link>

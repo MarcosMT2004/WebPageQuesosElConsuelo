@@ -14,15 +14,15 @@ const footerLinks = [
 
 export default function Footer() {
   return (
-    <footer style={{ background: "#231A0E" }}>
+    <footer style={{ background: "var(--color-verde-hondo)" }}>
       {/* FEADER */}
       <div
         className="px-6 py-8 flex justify-center"
-        style={{ borderTop: "1px solid rgba(193,125,60,0.12)" }}
+        style={{ borderTop: "1px solid rgba(201,162,74,0.12)" }}
       >
         <div
           className="flex flex-col sm:flex-row items-center gap-6 w-full max-w-2xl p-6"
-          style={{ background: "rgba(247,240,227,0.05)", border: "1px solid rgba(247,240,227,0.08)" }}
+          style={{ background: "rgba(243,242,238,0.05)", border: "1px solid rgba(243,242,238,0.08)" }}
         >
           <div className="flex-shrink-0 relative" style={{ width: 200, height: 100 }}>
             <Image
@@ -36,10 +36,10 @@ export default function Footer() {
           <div>
             <p
               className="text-xs leading-relaxed"
-              style={{ color: "rgba(247,240,227,0.45)", fontFamily: "var(--font-lora)" }}
+              style={{ color: "rgba(243,242,238,0.72)", fontFamily: "var(--font-body)" }}
             >
               Operación cofinanciada por el{" "}
-              <span style={{ color: "rgba(247,240,227,0.65)" }}>
+              <span style={{ color: "rgba(243,242,238,0.88)" }}>
                 Fondo Europeo Agrícola de Desarrollo Rural
               </span>{" "}
               (FEADER). Europa invierte en las zonas rurales.
@@ -70,9 +70,9 @@ export default function Footer() {
                   key={l.href}
                   href={l.href}
                   className="text-sm transition-colors duration-150"
-                  style={{ color: "rgba(247,240,227,0.55)", fontFamily: "var(--font-lora)" }}
-                  onMouseEnter={(e) => (e.currentTarget.style.color = "#C17D3C")}
-                  onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(247,240,227,0.55)")}
+                  style={{ color: "rgba(243,242,238,0.55)", fontFamily: "var(--font-body)" }}
+                  onMouseEnter={(e) => (e.currentTarget.style.color = "var(--color-oro)")}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(243,242,238,0.55)")}
                 >
                   {l.label}
                 </Link>
@@ -84,46 +84,46 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 transition-colors duration-150"
-              style={{ color: "rgba(247,240,227,0.55)", fontFamily: "var(--font-lora)", fontSize: "0.875rem" }}
+              style={{ color: "rgba(243,242,238,0.55)", fontFamily: "var(--font-body)", fontSize: "0.875rem" }}
               aria-label="Síguenos en Instagram"
-              onMouseEnter={(e) => (e.currentTarget.style.color = "#C17D3C")}
-              onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(247,240,227,0.55)")}
+              onMouseEnter={(e) => (e.currentTarget.style.color = "var(--color-oro)")}
+              onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(243,242,238,0.55)")}
             >
               <Camera size={18} />
               @quesoselconsuelo
             </a>
           </div>
 
-          <Separator style={{ background: "rgba(193,125,60,0.15)" }} />
+          <Separator style={{ background: "rgba(201,162,74,0.15)" }} />
 
           <div className="mt-8 flex flex-col md:flex-row items-center justify-between gap-3">
             <p
               className="text-xs"
-              style={{ color: "rgba(247,240,227,0.35)", fontFamily: "var(--font-lora)" }}
+              style={{ color: "rgba(243,242,238,0.72)", fontFamily: "var(--font-body)" }}
             >
               © {new Date().getFullYear()} S.A.T. Cañada Real Soriana · Madridejos, Toledo
             </p>
-            <div className="flex items-center gap-4 text-xs" style={{ fontFamily: "var(--font-lora)" }}>
+            <div className="flex items-center gap-4 text-xs" style={{ fontFamily: "var(--font-body)" }}>
               <Link
                 href="/aviso-legal"
-                style={{ color: "rgba(247,240,227,0.3)" }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = "rgba(247,240,227,0.6)")}
-                onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(247,240,227,0.3)")}
+                style={{ color: "rgba(243,242,238,0.72)" }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = "rgba(243,242,238,0.6)")}
+                onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(243,242,238,0.72)")}
               >
                 Aviso Legal
               </Link>
               <Link
                 href="/privacidad"
-                style={{ color: "rgba(247,240,227,0.3)" }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = "rgba(247,240,227,0.6)")}
-                onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(247,240,227,0.3)")}
+                style={{ color: "rgba(243,242,238,0.72)" }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = "rgba(243,242,238,0.6)")}
+                onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(243,242,238,0.72)")}
               >
                 Privacidad
               </Link>
             </div>
             <p
               className="text-xs text-center"
-              style={{ color: "rgba(247,240,227,0.25)", fontFamily: "var(--font-lora)" }}
+              style={{ color: "rgba(243,242,238,0.72)", fontFamily: "var(--font-body)" }}
             >
               Built with Claude Web Builder by{" "}
               <a
@@ -131,8 +131,8 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition-colors duration-150"
-                onMouseEnter={(e) => (e.currentTarget.style.color = "rgba(247,240,227,0.5)")}
-                onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(247,240,227,0.25)")}
+                onMouseEnter={(e) => (e.currentTarget.style.color = "rgba(243,242,238,0.5)")}
+                onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(243,242,238,0.72)")}
               >
                 Tododeia
               </a>

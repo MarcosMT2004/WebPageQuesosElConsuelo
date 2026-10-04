@@ -1,0 +1,393 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-04T19:05:59.305Z",
+  "title": "Design System: Quesos El Consuelo",
+  "extensions": {
+    "colorMeta": {
+      "verde": {
+        "role": "primary",
+        "displayName": "Verde Fachada",
+        "canonical": "#1F3B2D",
+        "tonalRamp": [
+          "oklch(15% 0.04 160)",
+          "oklch(27% 0.04 160)",
+          "oklch(39% 0.04 160)",
+          "oklch(51% 0.04 160)",
+          "oklch(63% 0.04 160)",
+          "oklch(75% 0.04 160)",
+          "oklch(85% 0.04 160)",
+          "oklch(95% 0.04 160)"
+        ]
+      },
+      "verde-hondo": {
+        "role": "primary",
+        "displayName": "Verde Hondo",
+        "canonical": "#142A20",
+        "tonalRamp": [
+          "oklch(15% 0.035 160)",
+          "oklch(27% 0.035 160)",
+          "oklch(39% 0.035 160)",
+          "oklch(51% 0.035 160)",
+          "oklch(63% 0.035 160)",
+          "oklch(75% 0.035 160)",
+          "oklch(85% 0.035 160)",
+          "oklch(95% 0.035 160)"
+        ]
+      },
+      "oro": {
+        "role": "secondary",
+        "displayName": "Pan de Oro",
+        "canonical": "#C9A24A",
+        "tonalRamp": [
+          "oklch(15% 0.11 85)",
+          "oklch(27% 0.11 85)",
+          "oklch(39% 0.11 85)",
+          "oklch(51% 0.11 85)",
+          "oklch(63% 0.11 85)",
+          "oklch(75% 0.11 85)",
+          "oklch(85% 0.11 85)",
+          "oklch(95% 0.11 85)"
+        ]
+      },
+      "oro-tinta": {
+        "role": "secondary",
+        "displayName": "Oro de Tinta",
+        "canonical": "#7D5F1C",
+        "tonalRamp": [
+          "oklch(15% 0.09 80)",
+          "oklch(27% 0.09 80)",
+          "oklch(39% 0.09 80)",
+          "oklch(51% 0.09 80)",
+          "oklch(63% 0.09 80)",
+          "oklch(75% 0.09 80)",
+          "oklch(85% 0.09 80)",
+          "oklch(95% 0.09 80)"
+        ]
+      },
+      "cordel": {
+        "role": "tertiary",
+        "displayName": "Cordel Rojo",
+        "canonical": "#B8452E",
+        "tonalRamp": [
+          "oklch(15% 0.15 35)",
+          "oklch(27% 0.15 35)",
+          "oklch(39% 0.15 35)",
+          "oklch(51% 0.15 35)",
+          "oklch(63% 0.15 35)",
+          "oklch(75% 0.15 35)",
+          "oklch(85% 0.15 35)",
+          "oklch(95% 0.15 35)"
+        ]
+      },
+      "marmol": {
+        "role": "neutral",
+        "displayName": "Mármol",
+        "canonical": "#F3F2EE",
+        "tonalRamp": [
+          "oklch(15% 0.005 95)",
+          "oklch(27% 0.005 95)",
+          "oklch(39% 0.005 95)",
+          "oklch(51% 0.005 95)",
+          "oklch(63% 0.005 95)",
+          "oklch(75% 0.005 95)",
+          "oklch(85% 0.005 95)",
+          "oklch(95% 0.005 95)"
+        ]
+      },
+      "azulejo": {
+        "role": "neutral",
+        "displayName": "Azulejo",
+        "canonical": "#E5EAE3",
+        "tonalRamp": [
+          "oklch(15% 0.012 140)",
+          "oklch(27% 0.012 140)",
+          "oklch(39% 0.012 140)",
+          "oklch(51% 0.012 140)",
+          "oklch(63% 0.012 140)",
+          "oklch(75% 0.012 140)",
+          "oklch(85% 0.012 140)",
+          "oklch(95% 0.012 140)"
+        ]
+      },
+      "estraza": {
+        "role": "neutral",
+        "displayName": "Estraza",
+        "canonical": "#D8C3A0",
+        "tonalRamp": [
+          "oklch(15% 0.045 80)",
+          "oklch(27% 0.045 80)",
+          "oklch(39% 0.045 80)",
+          "oklch(51% 0.045 80)",
+          "oklch(63% 0.045 80)",
+          "oklch(75% 0.045 80)",
+          "oklch(85% 0.045 80)",
+          "oklch(95% 0.045 80)"
+        ]
+      },
+      "tinta": {
+        "role": "neutral",
+        "displayName": "Tinta",
+        "canonical": "#22302A",
+        "tonalRamp": [
+          "oklch(15% 0.02 160)",
+          "oklch(27% 0.02 160)",
+          "oklch(39% 0.02 160)",
+          "oklch(51% 0.02 160)",
+          "oklch(63% 0.02 160)",
+          "oklch(75% 0.02 160)",
+          "oklch(85% 0.02 160)",
+          "oklch(95% 0.02 160)"
+        ]
+      },
+      "gris": {
+        "role": "neutral",
+        "displayName": "Gris Mostrador",
+        "canonical": "#56625A",
+        "tonalRamp": [
+          "oklch(15% 0.02 150)",
+          "oklch(27% 0.02 150)",
+          "oklch(39% 0.02 150)",
+          "oklch(51% 0.02 150)",
+          "oklch(63% 0.02 150)",
+          "oklch(75% 0.02 150)",
+          "oklch(85% 0.02 150)",
+          "oklch(95% 0.02 150)"
+        ]
+      },
+      "junta": {
+        "role": "neutral",
+        "displayName": "Junta",
+        "canonical": "#C9CFC6",
+        "tonalRamp": [
+          "oklch(15% 0.012 140)",
+          "oklch(27% 0.012 140)",
+          "oklch(39% 0.012 140)",
+          "oklch(51% 0.012 140)",
+          "oklch(63% 0.012 140)",
+          "oklch(75% 0.012 140)",
+          "oklch(85% 0.012 140)",
+          "oklch(95% 0.012 140)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Rótulo",
+        "purpose": "Nombre de la casa o de la línea, en oro sobre verde hondo. Una por página."
+      },
+      "headline": {
+        "displayName": "Titular de sección",
+        "purpose": "Titulares en verde con text-wrap: balance."
+      },
+      "title": {
+        "displayName": "Título de etiqueta",
+        "purpose": "Nombre en la etiqueta esmaltada y dato de cada paso."
+      },
+      "quote": {
+        "displayName": "Cita itálica",
+        "purpose": "Libro de visitas, título de la nota, placa de medalla. Itálica."
+      },
+      "body": {
+        "displayName": "Texto",
+        "purpose": "Texto corrido, medida 46–62ch."
+      },
+      "label": {
+        "displayName": "Etiqueta",
+        "purpose": "Enlaces de acción, botones, nombres en listas. Mayúsculas."
+      },
+      "label-sm": {
+        "displayName": "Etiqueta pequeña",
+        "purpose": "Leyendas de los campos de la nota. Mayúsculas."
+      },
+      "cifra": {
+        "displayName": "Cifra de libreta",
+        "purpose": "Teléfonos, cantidades, años, formatos. Cifras tabulares."
+      }
+    },
+    "shadows": [
+      {
+        "name": "nota",
+        "value": "0 18px 40px -12px rgba(20,42,32,0.55)",
+        "purpose": "Solo la nota de pedido."
+      },
+      {
+        "name": "hoja",
+        "value": "0 14px 30px -14px rgba(20,42,32,0.45)",
+        "purpose": "Hojas de mármol sobre azulejo."
+      },
+      {
+        "name": "balda",
+        "value": "0 10px 18px -8px rgba(20,42,32,0.6)",
+        "purpose": "Tabla bajo cada foto de quesos."
+      },
+      {
+        "name": "flotante",
+        "value": "0 8px 22px -6px rgba(20,42,32,0.6)",
+        "purpose": "Botón fijo de WhatsApp."
+      },
+      {
+        "name": "moldura",
+        "value": "inset 0 0 0 1px rgba(201,162,74,0.35), inset 0 0 0 7px var(--color-verde), inset 0 0 0 8px rgba(0,0,0,0.28)",
+        "purpose": "Marco de la fachada de cabecera."
+      },
+      {
+        "name": "grabado-rotulo",
+        "value": "text-shadow: 0 1px 0 #6b5216, 0 3px 10px rgba(0,0,0,0.45)",
+        "purpose": "Solo texto display en oro."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.23, 1, 0.32, 1)",
+        "purpose": "Curva única de todo el sitio."
+      },
+      {
+        "name": "entrada",
+        "value": "300–700ms",
+        "purpose": "Entradas por opacidad y desplazamiento corto."
+      },
+      {
+        "name": "atar-nota",
+        "value": "600ms",
+        "purpose": "El cordel se dibuja sobre el botón al enviar."
+      },
+      {
+        "name": "cordel-procedencia",
+        "value": "1600ms",
+        "purpose": "Trazado del recorrido al entrar en vista, una vez."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Botón de pedido",
+      "kind": "button",
+      "refersTo": "button-pedido",
+      "description": "Acción de conversión: envía la nota por WhatsApp.",
+      "html": "<a class=\"ds-btn-pedido\" href=\"#\"><svg width=\"19\" height=\"19\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.69 1.45c6.55 0 11.89-5.34 11.89-11.89A11.82 11.82 0 0 0 12.05 0z\"/></svg>Enviar pedido por WhatsApp</a>",
+      "css": ".ds-btn-pedido{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--color-verde,#1F3B2D);color:var(--color-marmol,#F3F2EE);padding:14px 20px;font-family:\"Barlow Condensed\",sans-serif;font-size:1.1rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;text-decoration:none;border-radius:0;transition:background-color .15s cubic-bezier(.23,1,.32,1)}.ds-btn-pedido:hover{background:var(--color-verde-hondo,#142A20)}.ds-btn-pedido:focus-visible{outline:2px solid var(--color-cordel,#B8452E);outline-offset:3px}.ds-btn-pedido:active{transform:scale(.97)}"
+    },
+    {
+      "name": "Enlace de acción",
+      "kind": "custom",
+      "refersTo": "enlace-cordel",
+      "description": "Enlace en versalitas con subrayado cordel y flecha.",
+      "html": "<a class=\"ds-enlace\" href=\"#\">Conocer El Cordel<svg width=\"17\" height=\"17\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14M12 5l7 7-7 7\"/></svg></a>",
+      "css": ".ds-enlace{display:inline-flex;align-items:center;gap:8px;font-family:\"Barlow Condensed\",sans-serif;font-size:1.05rem;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--color-verde,#1F3B2D);text-decoration:underline;text-decoration-color:var(--color-cordel,#B8452E);text-decoration-thickness:2px;text-underline-offset:6px;transition:color .15s}.ds-enlace svg{transition:transform .15s}.ds-enlace:hover{color:var(--color-cordel,#B8452E)}.ds-enlace:hover svg{transform:translateX(4px)}.ds-enlace:focus-visible{outline:2px solid var(--color-cordel,#B8452E);outline-offset:3px}"
+    },
+    {
+      "name": "Opción esmaltada",
+      "kind": "chip",
+      "refersTo": "opcion-esmaltada",
+      "description": "Radio nativo con aspecto de etiqueta esmaltada.",
+      "html": "<div class=\"ds-opciones\"><label><input type=\"radio\" name=\"ds-l\" checked><span>El Consuelo</span></label><label><input type=\"radio\" name=\"ds-l\"><span>El Cordel</span></label><label><input type=\"radio\" name=\"ds-l\"><span>El Redil</span></label></div>",
+      "css": ".ds-opciones{display:flex;flex-wrap:wrap;gap:6px}.ds-opciones label{cursor:pointer}.ds-opciones input{position:absolute;opacity:0;width:1px;height:1px}.ds-opciones span{display:block;padding:6px 12px;font-family:\"Barlow Condensed\",sans-serif;font-size:.95rem;font-weight:500;color:var(--color-tinta,#22302A);background:rgba(243,242,238,.7);border:1px solid rgba(31,59,45,.25);transition:border-color .15s,background-color .15s}.ds-opciones span:hover{border-color:var(--color-verde,#1F3B2D)}.ds-opciones input:checked+span{background:var(--color-verde,#1F3B2D);color:var(--color-marmol,#F3F2EE);border-color:var(--color-verde,#1F3B2D)}.ds-opciones input:focus-visible+span{outline:2px solid var(--color-cordel,#B8452E);outline-offset:2px}"
+    },
+    {
+      "name": "Campo de libreta",
+      "kind": "input",
+      "refersTo": "nota-pedido",
+      "description": "Campo sin caja, solo línea inferior.",
+      "html": "<label class=\"ds-campo\"><span>Tu nombre</span><input autocomplete=\"name\"></label>",
+      "css": ".ds-campo{display:block;background:var(--color-estraza,#D8C3A0);padding:16px}.ds-campo span{font-family:\"Barlow Condensed\",sans-serif;font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.12em;color:rgba(34,48,42,.8)}.ds-campo input{display:block;width:100%;margin-top:4px;background:transparent;border:0;border-bottom:1px solid rgba(34,48,42,.4);padding:6px 0;font:inherit;font-size:1rem;color:var(--color-tinta,#22302A);outline:none}.ds-campo input:focus{border-bottom-color:var(--color-verde,#1F3B2D)}"
+    },
+    {
+      "name": "Etiqueta esmaltada",
+      "kind": "card",
+      "refersTo": "etiqueta-esmaltada",
+      "description": "Placa de mármol con filete doble que nombra una balda o la medalla.",
+      "html": "<div class=\"ds-etiqueta\"><h3>El Cordel</h3><p>DOP · Plata WCA 2016</p></div>",
+      "css": ".ds-etiqueta{display:inline-block;border:3px double var(--color-verde,#1F3B2D);background:var(--color-marmol,#F3F2EE);padding:16px 20px}.ds-etiqueta h3{margin:0;font-family:\"Bodoni Moda\",Georgia,serif;font-weight:400;font-size:2rem;line-height:1;color:var(--color-verde,#1F3B2D)}.ds-etiqueta p{margin:8px 0 0;font-family:\"Barlow Condensed\",sans-serif;font-size:.95rem;font-weight:600;text-transform:uppercase;letter-spacing:.12em;color:var(--color-cordel,#B8452E)}"
+    },
+    {
+      "name": "Rótulo",
+      "kind": "custom",
+      "refersTo": "rotulo",
+      "description": "Rótulo de la casa en pan de oro sobre verde hondo.",
+      "html": "<div class=\"ds-rotulo-fachada\"><div class=\"ds-rotulo\"><h1>Quesos El Consuelo<span>Queso manchego artesano · desde 1938</span></h1></div></div>",
+      "css": ".ds-rotulo-fachada{background:var(--color-verde,#1F3B2D);padding:24px}.ds-rotulo{border:5px double rgba(201,162,74,.8);background:var(--color-verde-hondo,#142A20);padding:24px 16px;text-align:center}.ds-rotulo h1{margin:0;font-family:\"Bodoni Moda\",Georgia,serif;font-weight:600;font-size:clamp(2.6rem,8.2vw,6rem);line-height:.95;letter-spacing:-.01em;color:var(--color-oro,#C9A24A);text-shadow:0 1px 0 #6b5216,0 3px 10px rgba(0,0,0,.45)}.ds-rotulo span{display:block;margin-top:12px;font-family:\"Barlow Condensed\",sans-serif;font-weight:500;font-size:clamp(.85rem,1.6vw,1.15rem);text-transform:uppercase;letter-spacing:.28em;color:rgba(201,162,74,.85);text-shadow:none}"
+    },
+    {
+      "name": "Lista de libreta",
+      "kind": "custom",
+      "refersTo": "hoja-mostrador",
+      "description": "Clave, línea de puntos y valor en cifras tabulares.",
+      "html": "<dl class=\"ds-libreta\"><div><dt>Móvil y WhatsApp</dt><span aria-hidden=\"true\"></span><dd>667 638 293</dd></div><div><dt>Teléfono fijo</dt><span aria-hidden=\"true\"></span><dd>925 462 459</dd></div></dl>",
+      "css": ".ds-libreta{margin:0;max-width:36rem;font-family:\"Barlow Condensed\",sans-serif;font-size:1.15rem}.ds-libreta div{display:flex;align-items:baseline;gap:8px;padding:12px 0;border-bottom:1px solid rgba(31,59,45,.15)}.ds-libreta dt{font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--color-gris,#56625A)}.ds-libreta span{flex:1;border-bottom:2px dotted rgba(31,59,45,.25);transform:translateY(-4px)}.ds-libreta dd{margin:0;font-size:1.4rem;font-weight:600;font-variant-numeric:tabular-nums;color:var(--color-verde,#1F3B2D)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "El Mostrador de Ultramarinos",
+    "overview": "La web se comporta como la tienda de la quesería: una fachada de madera pintada en verde botella, un rótulo en pan de oro, una pared alicatada donde están las baldas con el género y un mostrador de mármol donde se apunta el pedido en una nota de papel de estraza. Cada pieza visual nombra un objeto de esa tienda (rótulo, escaparate, balda, etiqueta esmaltada, libreta, cordel, placa) y se dibuja con los medios de ese objeto: filetes dobles, molduras en relieve, líneas de puntos de libreta, un hilo rojo discontinuo.\n\nLa densidad es de comercio de barrio, no de catálogo: secciones anchas con mucho aire vertical, una idea por panel, cifras en columnas tabulares como en una libreta de pedidos. La profundidad es física y suave (el papel proyecta sombra sobre el mármol, la balda sobre la pared), nunca tarjetas flotantes genéricas. Las esquinas son rectas en todo el sistema; lo único redondo es el nudo del cordel.\n\nEl sistema rechaza explícitamente el «hero con foto, titular, botón y fila de tarjetas» en tonos crema. Las fotos son reales y siempre van enmarcadas por el mundo (cristal de escaparate, balda), nunca como fondo con texto encima.",
+    "keyCharacteristics": [
+      "Fachada verde con rótulo dorado como cabecera de cada superficie principal.",
+      "La nota de pedido de estraza es el componente central y la acción de conversión.",
+      "Esquinas a 0 px; filetes dobles (3–5 px) como borde de etiqueta y rótulo.",
+      "Tres voces tipográficas con reparto fijo: Bodoni rotula, Barlow etiqueta y cuenta, Franklin explica.",
+      "El cordel rojo marca estado activo, enlaces y el recorrido de la procedencia."
+    ],
+    "rules": [
+      {
+        "name": "The Pan de Oro Rule",
+        "body": "El oro (#C9A24A) solo se pinta sobre verde o verde hondo. Sobre mármol, azulejo o estraza, el acento dorado es oro-tinta o no existe.",
+        "section": "colors"
+      },
+      {
+        "name": "The Un Solo Hilo Rule",
+        "body": "El cordel es el único color cálido saturado del sistema y siempre significa hilo: enlace, foco, estado activo o recorrido. No se usa como fondo de superficie ni como decoración suelta.",
+        "section": "colors"
+      },
+      {
+        "name": "The Estraza Es Para Pedir Rule",
+        "body": "El papel de estraza identifica la nota de pedido. Ninguna otra superficie lo usa, para que el ojo encuentre siempre dónde se pide.",
+        "section": "colors"
+      },
+      {
+        "name": "The Tres Voces Rule",
+        "body": "Bodoni rotula, Barlow etiqueta y cuenta, Franklin explica. Un texto que explica nunca va en Barlow; una etiqueta o una cifra nunca va en Franklin.",
+        "section": "typography"
+      },
+      {
+        "name": "The Cifra De Libreta Rule",
+        "body": "Todo número que se lee en columna o se compara (cantidades, formatos, teléfonos, años) lleva cifras tabulares.",
+        "section": "typography"
+      },
+      {
+        "name": "The Objeto Apoyado Rule",
+        "body": "Una sombra solo existe si el objeto del mundo estaría apoyado o colgado (papel, hoja, balda, etiqueta). Siempre verde hondo, siempre hacia abajo, nunca desplazada en diagonal.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** abrir cada superficie principal con la fachada verde y un rótulo en oro sobre verde hondo dentro de un filete doble de 5 px.",
+      "**Do** poner la nota de pedido de estraza a la vista en la primera pantalla de toda página que venda un queso.",
+      "**Do** enmarcar las fotos reales en verde hondo (escaparate o balda), nunca como fondo bajo texto.",
+      "**Do** escribir listas de variedades, formatos y teléfonos como libreta: clave, línea de puntos, valor en cifras tabulares.",
+      "**Do** marcar enlaces de acción con el subrayado cordel de 2 px y usar el cordel para el foco.",
+      "**Do** usar sombras tintadas de verde hondo que caen hacia abajo, solo bajo objetos apoyados o colgados."
+    ],
+    "donts": [
+      "**Don't** montar el «hero con foto, titular, botón y fila de tarjetas» en crema.",
+      "**Don't** pintar oro (#C9A24A) sobre mármol, azulejo o estraza; ahí va oro-tinta.",
+      "**Don't** redondear esquinas; el único círculo es el nudo del cordel.",
+      "**Don't** usar estraza fuera de la nota de pedido ni cordel como fondo de superficie.",
+      "**Don't** rayar con renglones el fondo de un formulario o de una lista de alturas variables (la nota, el libro de visitas): no se alinean. La línea de puntos de libreta sí vale entre clave y valor.",
+      "**Don't** usar Franklin para etiquetas o cifras, ni Barlow para texto que explica."
+    ]
+  }
+}

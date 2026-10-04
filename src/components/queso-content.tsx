@@ -61,26 +61,17 @@ export default function QuesoContent() {
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(to bottom, rgba(35,26,14,0.2) 0%, rgba(35,26,14,0.65) 55%, rgba(35,26,14,0.92) 100%)",
+              "linear-gradient(to bottom, rgba(31,59,45,0.2) 0%, rgba(31,59,45,0.65) 55%, rgba(31,59,45,0.92) 100%)",
           }}
         />
         <div className="relative z-10 max-w-6xl mx-auto w-full px-6 pb-16 pt-32">
-          <motion.p
-            initial={{ transform: "translateY(20px)", opacity: 0 }}
-            animate={{ transform: "translateY(0px)", opacity: 1 }}
-            transition={{ duration: 0.6, ease }}
-            className="text-xs tracking-widest uppercase mb-4"
-            style={{ color: "#C17D3C", fontFamily: "var(--font-lora)" }}
-          >
-            El Queso
-          </motion.p>
           <motion.h1
             initial={{ transform: "translateY(28px)", opacity: 0 }}
             animate={{ transform: "translateY(0px)", opacity: 1 }}
             transition={{ duration: 0.7, delay: 0.1, ease }}
             style={{
-              fontFamily: "var(--font-cormorant)",
-              color: "#F7F0E3",
+              fontFamily: "var(--font-display)",
+              color: "var(--color-marmol)",
               fontSize: "clamp(2.4rem, 5vw, 4.5rem)",
               lineHeight: 1.05,
               fontWeight: 400,
@@ -97,7 +88,7 @@ export default function QuesoContent() {
       <section
         ref={dopRef}
         className="py-24 lg:py-32 px-6"
-        style={{ background: "#F7F0E3" }}
+        style={{ background: "var(--color-marmol)" }}
       >
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
           <motion.div
@@ -105,18 +96,12 @@ export default function QuesoContent() {
             animate={dopInView ? { transform: "translateX(0px)", opacity: 1 } : {}}
             transition={{ duration: 0.7, ease }}
           >
-            <p
-              className="text-xs tracking-widest uppercase mb-4"
-              style={{ color: "#C17D3C", fontFamily: "var(--font-lora)" }}
-            >
-              Denominación de Origen Protegida
-            </p>
             <h2
               className="mb-6"
               style={{
-                fontFamily: "var(--font-cormorant)",
+                fontFamily: "var(--font-display)",
                 fontSize: "clamp(2rem, 3.5vw, 3rem)",
-                color: "#231A0E",
+                color: "var(--color-verde)",
                 fontWeight: 400,
                 lineHeight: 1.2,
               }}
@@ -125,7 +110,7 @@ export default function QuesoContent() {
             </h2>
             <div
               className="space-y-4"
-              style={{ color: "#5a3f25", fontFamily: "var(--font-lora)", fontSize: "0.9rem", lineHeight: 1.75 }}
+              style={{ color: "var(--color-tinta)", fontFamily: "var(--font-body)", fontSize: "0.9rem", lineHeight: 1.75 }}
             >
               <p>
                 El queso manchego es un queso de pasta prensada elaborado exclusivamente con leche de oveja de raza manchega, procedente de rebaños inscritos en el Registro de la Denominación de Origen Protegida Manchego.
@@ -155,16 +140,16 @@ export default function QuesoContent() {
             />
             <div
               className="absolute bottom-6 left-6 right-6 px-6 py-5"
-              style={{ background: "rgba(35,26,14,0.85)", backdropFilter: "blur(4px)" }}
+              style={{ background: "rgba(31,59,45,0.85)", backdropFilter: "blur(4px)" }}
             >
               <p
-                style={{ fontFamily: "var(--font-cormorant)", fontSize: "1.05rem", color: "#F7F0E3", fontStyle: "italic", lineHeight: 1.4 }}
+                style={{ fontFamily: "var(--font-display)", fontSize: "1.05rem", color: "var(--color-marmol)", fontStyle: "italic", lineHeight: 1.4 }}
               >
-                "Queso de pasta prensada, elaborado con leche entera y cruda de oveja manchega, con mínimo 6° de materia grasa."
+                “Queso de pasta prensada, elaborado con leche entera y cruda de oveja manchega, con mínimo 6° de materia grasa.”
               </p>
               <p
                 className="mt-2 text-xs"
-                style={{ color: "rgba(247,240,227,0.5)", fontFamily: "var(--font-lora)" }}
+                style={{ color: "rgba(243,242,238,0.5)", fontFamily: "var(--font-body)" }}
               >
                 Especificaciones DOP Manchego
               </p>
@@ -177,7 +162,7 @@ export default function QuesoContent() {
       <section
         ref={carRef}
         className="py-24 lg:py-32 px-6"
-        style={{ background: "#efe8d8" }}
+        style={{ background: "var(--color-azulejo)" }}
       >
         <div className="max-w-6xl mx-auto">
           <motion.div
@@ -186,17 +171,11 @@ export default function QuesoContent() {
             transition={{ duration: 0.6, ease }}
             className="mb-14"
           >
-            <p
-              className="text-xs tracking-widest uppercase mb-4"
-              style={{ color: "#C17D3C", fontFamily: "var(--font-lora)" }}
-            >
-              Cómo reconocerlo
-            </p>
             <h2
               style={{
-                fontFamily: "var(--font-cormorant)",
+                fontFamily: "var(--font-display)",
                 fontSize: "clamp(2rem, 3.5vw, 3rem)",
-                color: "#231A0E",
+                color: "var(--color-verde)",
                 fontWeight: 400,
               }}
             >
@@ -212,21 +191,21 @@ export default function QuesoContent() {
                 animate={carInView ? { transform: "translateY(0px)", opacity: 1 } : {}}
                 transition={{ duration: 0.6, delay: 0.08 + i * 0.07, ease }}
                 className="p-8"
-                style={{ background: "#F7F0E3", border: "1px solid rgba(193,125,60,0.2)" }}
+                style={{ background: "var(--color-marmol)", border: "1px solid rgba(201,162,74,0.2)" }}
               >
                 <h3
                   className="mb-3"
                   style={{
-                    fontFamily: "var(--font-cormorant)",
+                    fontFamily: "var(--font-display)",
                     fontSize: "1.5rem",
-                    color: "#C17D3C",
+                    color: "var(--color-oro-tinta)",
                     fontWeight: 500,
                   }}
                 >
                   {c.label}
                 </h3>
                 <p
-                  style={{ color: "#5a3f25", fontFamily: "var(--font-lora)", fontSize: "0.9rem", lineHeight: 1.75 }}
+                  style={{ color: "var(--color-tinta)", fontFamily: "var(--font-body)", fontSize: "0.9rem", lineHeight: 1.75 }}
                 >
                   {c.desc}
                 </p>
@@ -240,7 +219,7 @@ export default function QuesoContent() {
       <section
         ref={marRef}
         className="py-24 lg:py-32 px-6"
-        style={{ background: "#231A0E" }}
+        style={{ background: "var(--color-verde)" }}
       >
         <div className="max-w-6xl mx-auto">
           <motion.div
@@ -249,17 +228,11 @@ export default function QuesoContent() {
             transition={{ duration: 0.6, ease }}
             className="mb-14"
           >
-            <p
-              className="text-xs tracking-widest uppercase mb-4"
-              style={{ color: "#C17D3C", fontFamily: "var(--font-lora)" }}
-            >
-              Maridajes
-            </p>
             <h2
               style={{
-                fontFamily: "var(--font-cormorant)",
+                fontFamily: "var(--font-display)",
                 fontSize: "clamp(2rem, 3.5vw, 3rem)",
-                color: "#F7F0E3",
+                color: "var(--color-marmol)",
                 fontWeight: 400,
               }}
             >
@@ -275,21 +248,21 @@ export default function QuesoContent() {
                 animate={marInView ? { transform: "translateY(0px)", opacity: 1 } : {}}
                 transition={{ duration: 0.5, delay: 0.08 + i * 0.07, ease }}
                 className="p-6"
-                style={{ background: "rgba(247,240,227,0.06)", border: "1px solid rgba(247,240,227,0.1)" }}
+                style={{ background: "rgba(243,242,238,0.06)", border: "1px solid rgba(243,242,238,0.1)" }}
               >
                 <h3
                   className="mb-2"
                   style={{
-                    fontFamily: "var(--font-cormorant)",
+                    fontFamily: "var(--font-display)",
                     fontSize: "1.25rem",
-                    color: "#C17D3C",
+                    color: "var(--color-oro)",
                     fontWeight: 500,
                   }}
                 >
                   {m.item}
                 </h3>
                 <p
-                  style={{ fontFamily: "var(--font-lora)", fontSize: "0.85rem", color: "rgba(247,240,227,0.65)", lineHeight: 1.65 }}
+                  style={{ fontFamily: "var(--font-body)", fontSize: "0.85rem", color: "rgba(243,242,238,0.65)", lineHeight: 1.65 }}
                 >
                   {m.nota}
                 </p>
@@ -300,20 +273,14 @@ export default function QuesoContent() {
       </section>
 
       {/* Conservación */}
-      <section className="py-20 px-6" style={{ background: "#F7F0E3" }}>
+      <section className="py-20 px-6" style={{ background: "var(--color-marmol)" }}>
         <div className="max-w-3xl mx-auto">
-          <p
-            className="text-xs tracking-widest uppercase mb-4"
-            style={{ color: "#C17D3C", fontFamily: "var(--font-lora)" }}
-          >
-            Conservación
-          </p>
           <h2
             className="mb-6"
             style={{
-              fontFamily: "var(--font-cormorant)",
+              fontFamily: "var(--font-display)",
               fontSize: "clamp(1.8rem, 3vw, 2.6rem)",
-              color: "#231A0E",
+              color: "var(--color-verde)",
               fontWeight: 400,
             }}
           >
@@ -321,7 +288,7 @@ export default function QuesoContent() {
           </h2>
           <div
             className="space-y-3"
-            style={{ color: "#5a3f25", fontFamily: "var(--font-lora)", fontSize: "0.9rem", lineHeight: 1.75 }}
+            style={{ color: "var(--color-tinta)", fontFamily: "var(--font-body)", fontSize: "0.9rem", lineHeight: 1.75 }}
           >
             <p>Envuelve el queso en papel encerado o film, nunca hermético. Necesita respirar. Guárdalo en la parte baja del frigorífico, entre 4 y 8 °C.</p>
             <p>Sácalo 30 minutos antes de servir. El frío adormece los aromas. A temperatura ambiente es donde el queso manchego muestra todo lo que tiene.</p>
@@ -331,20 +298,14 @@ export default function QuesoContent() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 px-6 text-center" style={{ background: "#efe8d8" }}>
+      <section className="py-24 px-6 text-center" style={{ background: "var(--color-azulejo)" }}>
         <div className="max-w-xl mx-auto">
-          <p
-            className="text-xs tracking-widest uppercase mb-4"
-            style={{ color: "#C17D3C", fontFamily: "var(--font-lora)" }}
-          >
-            Nuestras líneas
-          </p>
           <h2
             className="mb-8"
             style={{
-              fontFamily: "var(--font-cormorant)",
+              fontFamily: "var(--font-display)",
               fontSize: "clamp(1.8rem, 3.5vw, 3rem)",
-              color: "#231A0E",
+              color: "var(--color-verde)",
               fontWeight: 400,
               fontStyle: "italic",
             }}
@@ -355,7 +316,7 @@ export default function QuesoContent() {
             <Button
               asChild
               size="lg"
-              style={{ background: "#C17D3C", color: "#F7F0E3", fontFamily: "var(--font-lora)" }}
+              style={{ background: "var(--color-oro)", color: "var(--color-verde-hondo)", fontFamily: "var(--font-body)" }}
               className="hover:opacity-90 transition-opacity"
             >
               <Link href="/quesos/el-cordel">El Cordel DOP</Link>
@@ -364,7 +325,7 @@ export default function QuesoContent() {
               asChild
               size="lg"
               variant="outline"
-              style={{ borderColor: "rgba(35,26,14,0.3)", color: "#231A0E", fontFamily: "var(--font-lora)" }}
+              style={{ borderColor: "rgba(31,59,45,0.3)", color: "var(--color-verde)", fontFamily: "var(--font-body)" }}
               className="hover:bg-black/5 transition-colors"
             >
               <Link href="/quesos/el-consuelo">El Consuelo</Link>

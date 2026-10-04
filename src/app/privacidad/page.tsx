@@ -1,3 +1,4 @@
+import { WA_URL } from "@/lib/contacto";
 import type { Metadata } from "next";
 import Nav from "@/components/nav";
 import Breadcrumb from "@/components/breadcrumb";
@@ -17,17 +18,17 @@ export default function PrivacidadPage() {
 
       <article
         className="px-6 py-16"
-        style={{ background: "#F7F0E3", minHeight: "60vh" }}
+        style={{ background: "var(--color-marmol)", minHeight: "60vh" }}
       >
         <div className="max-w-3xl mx-auto">
           <h1
             className="mb-10"
             style={{
-              fontFamily: "var(--font-cormorant)",
+              fontFamily: "var(--font-display)",
               fontSize: "clamp(2rem, 5vw, 3.5rem)",
               fontWeight: 400,
               fontStyle: "italic",
-              color: "#231A0E",
+              color: "var(--color-verde)",
             }}
           >
             Política de Privacidad
@@ -35,9 +36,9 @@ export default function PrivacidadPage() {
 
           <div
             className="space-y-8 text-sm leading-relaxed"
-            style={{ fontFamily: "var(--font-lora)", color: "#231A0E" }}
+            style={{ fontFamily: "var(--font-body)", color: "var(--color-verde)" }}
           >
-            <p style={{ color: "#8C7B6A" }}>
+            <p style={{ color: "var(--color-gris)" }}>
               En S.A.T. Cañada Real Soriana nos comprometemos a proteger y respetar
               su privacidad de conformidad con el Reglamento (UE) 2016/679 (RGPD) y
               la Ley Orgánica 3/2018, de 5 de diciembre (LOPDGDD).
@@ -47,15 +48,15 @@ export default function PrivacidadPage() {
               <h2
                 className="mb-3"
                 style={{
-                  fontFamily: "var(--font-cormorant)",
+                  fontFamily: "var(--font-display)",
                   fontSize: "1.4rem",
                   fontStyle: "italic",
-                  color: "#7A3B28",
+                  color: "var(--color-cordel)",
                 }}
               >
                 1. Responsable del tratamiento
               </h2>
-              <ul className="space-y-1 pl-4" style={{ borderLeft: "2px solid #C17D3C" }}>
+              <ul className="space-y-1 pl-4" style={{ borderLeft: "2px solid var(--color-oro)" }}>
                 <li className="pl-3"><strong>Identidad:</strong> S.A.T. Cañada Real Soriana</li>
                 <li className="pl-3"><strong>Dirección:</strong> Ctra. Toledo-Alcázar de San Juan, km 69,200, Madridejos (Toledo)</li>
                 <li className="pl-3"><strong>Contacto:</strong> +34 667 638 293 (WhatsApp y llamadas)</li>
@@ -66,10 +67,10 @@ export default function PrivacidadPage() {
               <h2
                 className="mb-3"
                 style={{
-                  fontFamily: "var(--font-cormorant)",
+                  fontFamily: "var(--font-display)",
                   fontSize: "1.4rem",
                   fontStyle: "italic",
-                  color: "#7A3B28",
+                  color: "var(--color-cordel)",
                 }}
               >
                 2. Datos que recogemos
@@ -95,10 +96,10 @@ export default function PrivacidadPage() {
               <h2
                 className="mb-3"
                 style={{
-                  fontFamily: "var(--font-cormorant)",
+                  fontFamily: "var(--font-display)",
                   fontSize: "1.4rem",
                   fontStyle: "italic",
-                  color: "#7A3B28",
+                  color: "var(--color-cordel)",
                 }}
               >
                 3. Finalidad y base jurídica del tratamiento
@@ -106,23 +107,23 @@ export default function PrivacidadPage() {
               <div className="overflow-x-auto">
                 <table className="w-full text-xs border-collapse">
                   <thead>
-                    <tr style={{ background: "rgba(193,125,60,0.12)" }}>
-                      <th className="p-3 text-left" style={{ border: "1px solid rgba(193,125,60,0.2)" }}>Finalidad</th>
-                      <th className="p-3 text-left" style={{ border: "1px solid rgba(193,125,60,0.2)" }}>Base jurídica</th>
+                    <tr style={{ background: "rgba(201,162,74,0.12)" }}>
+                      <th className="p-3 text-left" style={{ border: "1px solid rgba(201,162,74,0.2)" }}>Finalidad</th>
+                      <th className="p-3 text-left" style={{ border: "1px solid rgba(201,162,74,0.2)" }}>Base jurídica</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td className="p-3" style={{ border: "1px solid rgba(193,125,60,0.2)" }}>Atender consultas comerciales</td>
-                      <td className="p-3" style={{ border: "1px solid rgba(193,125,60,0.2)" }}>Consentimiento del interesado (art. 6.1.a RGPD)</td>
+                      <td className="p-3" style={{ border: "1px solid rgba(201,162,74,0.2)" }}>Atender consultas comerciales</td>
+                      <td className="p-3" style={{ border: "1px solid rgba(201,162,74,0.2)" }}>Consentimiento del interesado (art. 6.1.a RGPD)</td>
                     </tr>
-                    <tr style={{ background: "rgba(247,240,227,0.6)" }}>
-                      <td className="p-3" style={{ border: "1px solid rgba(193,125,60,0.2)" }}>Gestionar y enviar pedidos</td>
-                      <td className="p-3" style={{ border: "1px solid rgba(193,125,60,0.2)" }}>Ejecución de contrato (art. 6.1.b RGPD)</td>
+                    <tr style={{ background: "rgba(243,242,238,0.6)" }}>
+                      <td className="p-3" style={{ border: "1px solid rgba(201,162,74,0.2)" }}>Gestionar y enviar pedidos</td>
+                      <td className="p-3" style={{ border: "1px solid rgba(201,162,74,0.2)" }}>Ejecución de contrato (art. 6.1.b RGPD)</td>
                     </tr>
                     <tr>
-                      <td className="p-3" style={{ border: "1px solid rgba(193,125,60,0.2)" }}>Cumplir obligaciones legales</td>
-                      <td className="p-3" style={{ border: "1px solid rgba(193,125,60,0.2)" }}>Obligación legal (art. 6.1.c RGPD)</td>
+                      <td className="p-3" style={{ border: "1px solid rgba(201,162,74,0.2)" }}>Cumplir obligaciones legales</td>
+                      <td className="p-3" style={{ border: "1px solid rgba(201,162,74,0.2)" }}>Obligación legal (art. 6.1.c RGPD)</td>
                     </tr>
                   </tbody>
                 </table>
@@ -133,10 +134,10 @@ export default function PrivacidadPage() {
               <h2
                 className="mb-3"
                 style={{
-                  fontFamily: "var(--font-cormorant)",
+                  fontFamily: "var(--font-display)",
                   fontSize: "1.4rem",
                   fontStyle: "italic",
-                  color: "#7A3B28",
+                  color: "var(--color-cordel)",
                 }}
               >
                 4. Plazo de conservación
@@ -153,10 +154,10 @@ export default function PrivacidadPage() {
               <h2
                 className="mb-3"
                 style={{
-                  fontFamily: "var(--font-cormorant)",
+                  fontFamily: "var(--font-display)",
                   fontSize: "1.4rem",
                   fontStyle: "italic",
-                  color: "#7A3B28",
+                  color: "var(--color-cordel)",
                 }}
               >
                 5. Cesión de datos a terceros
@@ -172,10 +173,10 @@ export default function PrivacidadPage() {
               <h2
                 className="mb-3"
                 style={{
-                  fontFamily: "var(--font-cormorant)",
+                  fontFamily: "var(--font-display)",
                   fontSize: "1.4rem",
                   fontStyle: "italic",
-                  color: "#7A3B28",
+                  color: "var(--color-cordel)",
                 }}
               >
                 6. Sus derechos
@@ -196,8 +197,8 @@ export default function PrivacidadPage() {
                 Para ejercer cualquiera de estos derechos, puede contactarnos por
                 teléfono al{" "}
                 <a
-                  href="https://wa.me/34667638293"
-                  style={{ color: "#C17D3C", textDecoration: "underline" }}
+                  href={WA_URL}
+                  style={{ color: "var(--color-oro)", textDecoration: "underline" }}
                 >
                   +34 667 638 293
                 </a>
@@ -210,10 +211,10 @@ export default function PrivacidadPage() {
               <h2
                 className="mb-3"
                 style={{
-                  fontFamily: "var(--font-cormorant)",
+                  fontFamily: "var(--font-display)",
                   fontSize: "1.4rem",
                   fontStyle: "italic",
-                  color: "#7A3B28",
+                  color: "var(--color-cordel)",
                 }}
               >
                 7. Política de cookies
@@ -228,7 +229,7 @@ export default function PrivacidadPage() {
 
             <p
               className="pt-4 text-xs"
-              style={{ color: "#8C7B6A", borderTop: "1px solid rgba(193,125,60,0.2)" }}
+              style={{ color: "var(--color-gris)", borderTop: "1px solid rgba(201,162,74,0.2)" }}
             >
               Última actualización: septiembre de 2025
             </p>

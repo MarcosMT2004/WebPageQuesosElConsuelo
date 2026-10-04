@@ -8,13 +8,13 @@ export default function NotFound() {
       <Nav />
       <section
         className="flex flex-col items-center justify-center text-center px-6"
-        style={{ minHeight: "100vh", background: "#231A0E" }}
+        style={{ minHeight: "100vh", background: "var(--color-verde)" }}
       >
         <p
           style={{
-            fontFamily: "var(--font-cormorant)",
+            fontFamily: "var(--font-display)",
             fontSize: "clamp(6rem, 20vw, 14rem)",
-            color: "rgba(193,125,60,0.2)",
+            color: "rgba(201,162,74,0.2)",
             lineHeight: 1,
             fontWeight: 400,
             fontStyle: "italic",
@@ -27,9 +27,9 @@ export default function NotFound() {
         <h1
           className="-mt-4 mb-6"
           style={{
-            fontFamily: "var(--font-cormorant)",
+            fontFamily: "var(--font-display)",
             fontSize: "clamp(1.8rem, 4vw, 3rem)",
-            color: "#F7F0E3",
+            color: "var(--color-marmol)",
             fontWeight: 400,
             fontStyle: "italic",
           }}
@@ -39,9 +39,9 @@ export default function NotFound() {
         <p
           className="mb-10 max-w-sm"
           style={{
-            fontFamily: "var(--font-lora)",
+            fontFamily: "var(--font-body)",
             fontSize: "0.9rem",
-            color: "rgba(247,240,227,0.55)",
+            color: "rgba(243,242,238,0.55)",
             lineHeight: 1.75,
           }}
         >
@@ -51,9 +51,9 @@ export default function NotFound() {
           href="/"
           className="inline-block px-8 py-3 text-sm transition-opacity hover:opacity-90"
           style={{
-            background: "#C17D3C",
-            color: "#F7F0E3",
-            fontFamily: "var(--font-lora)",
+            background: "var(--color-oro)",
+            color: "var(--color-verde-hondo)",
+            fontFamily: "var(--font-body)",
           }}
         >
           Volver al inicio

@@ -1,0 +1,116 @@
+{
+  "title": "Elige el mundo visual de la web",
+  "question": "La tirada ha asignado «El Mostrador de Ultramarinos». Quédate con ella, elige una alternativa o vuelve a tirar.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "El Mostrador de Ultramarinos",
+      "kicker": "THE ROLL",
+      "lineage": "Tiendas de ultramarinos españolas, 1930–1970",
+      "thesis": "La web es la tienda del pueblo: rótulo dorado sobre madera verde botella y el queso que se corta y se envuelve al pedirlo.",
+      "palette": ["#1F3B2D", "#C9A24A", "#F4F1EA", "#B8452E", "#A9825A"],
+      "materials": ["madera pintada verde botella con rótulo en pan de oro", "mármol blanco de mostrador", "papel de estraza con sello de tinta", "cordel rojo y blanco", "etiquetas de precio esmaltadas"],
+      "viewport": "Fachada de tienda a pantalla completa: el rótulo «Quesos El Consuelo» en dorado preside, y en el escaparate están las tres ruedas reales con su etiqueta esmaltada. Al lado, la «nota de pedido» ya funciona: eliges queso, curación y peso, y se envía por WhatsApp.",
+      "risk": "Si se queda en un decorado de época, parece un bar temático. Tiene que vender de verdad: la nota de pedido es lo que manda.",
+      "raised": [
+        { "from": "challenger-cartografia", "raise": "Procedencia trazada: cada queso enseña su recorrido (rebaño → leche cruda → bodega → placa de caseína) como una línea de cordel dibujada, no como un párrafo." },
+        { "from": "challenger-saul-bass", "raise": "Una idea por plano: la historia de 1938 a hoy se cuenta en paneles a sangre, con un solo dato cada uno, en vez de un bloque de texto." },
+        { "from": "challenger-exposicion", "raise": "Cifras de libro de cuentas: los meses de curación, los pesos y los años van en números tabulares y alineados, como en la libreta del tendero." },
+        { "from": "challenger-miura", "raise": "Un tirón y se despliega: la nota de pedido pasa de ser una tira compacta a una hoja completa con un solo gesto." }
+      ]
+    },
+    {
+      "id": "model-pick",
+      "label": "La Rueda: Pleita, Flor y Placa",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "La corteza del queso manchego: el zigzag de la pleita, la flor en las caras y la placa de caseína numerada",
+      "thesis": "La identidad sale del propio queso: el zigzag de la pleita hace de trama, la flor estampada hace de sello y cada sección va numerada como una placa de caseína.",
+      "palette": ["#2A2118", "#D9B26A", "#7C5A2E", "#EDE3CF", "#3E6B47"],
+      "materials": ["relieve de pleita de esparto", "cera de corteza", "placa de caseína numerada", "flor tallada en las caras"],
+      "viewport": "Una rueda enorme en primer plano, cortada en cuña: en el corte se leen la variedad y la curación, y el canto de la corteza lleva el menú.",
+      "risk": "Es la dirección más previsible para un queso, y a la que llegaría la mayoría. Además, la paleta tira hacia el crema por defecto."
+    },
+    {
+      "id": "challenger-cartografia",
+      "label": "Mapa de la Cañada",
+      "verdict": "declined",
+      "lineage": "Mapa del tesoro sobre vitela (fusionado con la Cañada Real Soriana)",
+      "thesis": "La web como el mapa de la vía pecuaria que da nombre a la empresa.",
+      "palette": ["#C8B48A", "#4A3424", "#8E9091", "#A8322A"],
+      "materials": ["vitela", "tinta ferrogálica", "manchas de marea"],
+      "viewport": "El mapa entero de la cañada, con el rebaño marcado en rojo.",
+      "case": "Funde bien con el nombre de la empresa, pero pierde en claridad: quien quiere pedir queso no quiere descifrar un mapa.",
+      "kept": "Se queda con su disciplina: cada afirmación lleva su procedencia.",
+      "risk": "Navegar se convierte en adivinar.",
+      "hero": "https://impeccable.style/worlds/cards/wayfinding-cartography-signage-salt-stiffened-treasure-map-hero.webp"
+    },
+    {
+      "id": "challenger-saul-bass",
+      "label": "Títulos de Saul Bass",
+      "verdict": "declined",
+      "lineage": "Créditos de cine en papel recortado",
+      "thesis": "88 años contados como una secuencia de títulos con siluetas de ovejas recortadas.",
+      "palette": ["#D9581E", "#111111", "#F2EEE4"],
+      "materials": ["papel recortado", "campo de color plano"],
+      "viewport": "Una oveja recortada en negro sobre un campo naranja quemado.",
+      "case": "Cuenta la historia con fuerza, pero el comprador no se reconoce en el cine de los 60 y el producto queda en segundo plano.",
+      "kept": "Se queda con su disciplina: una sola idea por panel.",
+      "risk": "Puede parecer un homenaje y no una quesería.",
+      "hero": "https://impeccable.style/worlds/cards/posters-covers-sleeves-saul-bass-title-hero.webp"
+    },
+    {
+      "id": "challenger-exposicion",
+      "label": "Ficha de Exposición",
+      "verdict": "declined",
+      "lineage": "Ficha de positivado de cuarto oscuro",
+      "thesis": "Hojas translúcidas superpuestas con una escala de zonas.",
+      "palette": ["#1A1A1A", "#8A8A8A", "#E8E8E8", "#C2187A"],
+      "materials": ["papel vegetal", "rampa de zonas"],
+      "viewport": "Hojas apiladas en ligero ángulo con cifras en mono.",
+      "case": "No funde: es un instrumento técnico ajeno al comprador y al producto.",
+      "kept": "Se queda con su disciplina: cifras tabulares precisas.",
+      "risk": "Frío y técnico para un producto artesano.",
+      "hero": "https://impeccable.style/worlds/cards/operate-b-exposure-record-zone-sheets-hero.webp"
+    },
+    {
+      "id": "challenger-osciloscopio",
+      "label": "Osciloscopio",
+      "verdict": "declined",
+      "lineage": "Banco de señales CRT",
+      "thesis": "La curación representada como una señal en fósforo verde.",
+      "palette": ["#0B0F0C", "#39FF6A", "#5A5F5B", "#F2A23A"],
+      "materials": ["vidrio CRT", "retícula grabada"],
+      "viewport": "Una retícula con la curva de maduración.",
+      "case": "No funde: es un mundo de laboratorio, sin relación con el queso.",
+      "kept": "Se queda con su disciplina: todo se mide contra una sola retícula.",
+      "risk": "Un disfraz tecnológico.",
+      "hero": "https://impeccable.style/worlds/cards/scientific-notation-oscilloscope-signal-bench-hero.webp"
+    },
+    {
+      "id": "challenger-miura",
+      "label": "Pliegue Miura",
+      "verdict": "declined",
+      "lineage": "Lámina plegada desplegable",
+      "thesis": "Una lámina que se despliega de un solo tirón.",
+      "palette": ["#FAFAFA", "#C9A43A", "#8F8A82", "#9DB8D1", "#151515"],
+      "materials": ["papel mate plegado", "foil dorado"],
+      "viewport": "Un paquete dorado que se abre en una lámina teselada.",
+      "case": "No funde como mundo, pero su gesto encaja con el papel de envolver.",
+      "kept": "Se queda con su disciplina: un solo gesto despliega todo.",
+      "risk": "Es un efecto sin raíz en el producto.",
+      "hero": "https://impeccable.style/worlds/cards/paper-folds-pleats-deployable-miura-orbit-sheet-hero.webp"
+    }
+  ],
+  "reroll": { "registers": ["safer", "bolder"] },
+  "buildPath": { "value": "code", "toggle": false },
+  "canon": true,
+  "canonCard": {
+    "label": "El estándar de la categoría",
+    "thesis": "Lo que hace cualquier quesería artesanal online, ejecutado con todo el oficio.",
+    "palette": ["#F7F0E3", "#231A0E", "#C17D3C"],
+    "materials": ["fondo crema", "serif de titulares", "fotografía de producto"],
+    "viewport": "Foto de portada con titular y botón, debajo tarjetas de las tres líneas. Es la web actual, pero pulida.",
+    "risk": "Indistinguible de la competencia, por diseño."
+  },
+  "steer": true
+}

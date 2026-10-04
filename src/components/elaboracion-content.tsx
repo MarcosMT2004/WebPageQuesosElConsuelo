@@ -84,26 +84,17 @@ export default function ElaboracionContent() {
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(to bottom, rgba(35,26,14,0.3) 0%, rgba(35,26,14,0.7) 60%, rgba(35,26,14,0.92) 100%)",
+              "linear-gradient(to bottom, rgba(31,59,45,0.3) 0%, rgba(31,59,45,0.7) 60%, rgba(31,59,45,0.92) 100%)",
           }}
         />
         <div className="relative z-10 max-w-6xl mx-auto w-full px-6 pb-16 pt-32">
-          <motion.p
-            initial={{ transform: "translateY(20px)", opacity: 0 }}
-            animate={{ transform: "translateY(0px)", opacity: 1 }}
-            transition={{ duration: 0.6, ease }}
-            className="text-xs tracking-widest uppercase mb-4"
-            style={{ color: "#C17D3C", fontFamily: "var(--font-lora)" }}
-          >
-            La Elaboración
-          </motion.p>
           <motion.h1
             initial={{ transform: "translateY(28px)", opacity: 0 }}
             animate={{ transform: "translateY(0px)", opacity: 1 }}
             transition={{ duration: 0.7, delay: 0.1, ease }}
             style={{
-              fontFamily: "var(--font-cormorant)",
-              color: "#F7F0E3",
+              fontFamily: "var(--font-display)",
+              color: "var(--color-marmol)",
               fontSize: "clamp(2.4rem, 5vw, 4.5rem)",
               lineHeight: 1.05,
               fontWeight: 400,
@@ -117,28 +108,30 @@ export default function ElaboracionContent() {
       </section>
 
       {/* Intro */}
-      <section className="py-20 px-6" style={{ background: "#F7F0E3" }}>
+      <section className="py-20 px-6" style={{ background: "var(--color-marmol)" }}>
         <div className="max-w-3xl mx-auto text-center">
           <motion.p
             initial={{ transform: "translateY(20px)", opacity: 0 }}
-            animate={{ transform: "translateY(0px)", opacity: 1 }}
+            whileInView={{ transform: "translateY(0px)", opacity: 1 }}
+            viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.7, delay: 0.2, ease }}
             style={{
-              fontFamily: "var(--font-cormorant)",
+              fontFamily: "var(--font-display)",
               fontSize: "clamp(1.3rem, 2.5vw, 1.8rem)",
-              color: "#231A0E",
+              color: "var(--color-verde)",
               lineHeight: 1.5,
               fontStyle: "italic",
             }}
           >
-            "Elaboramos a la manera tradicional, pero con los equipamientos e instalaciones que exige la normativa sanitaria actual."
+            “Elaboramos a la manera tradicional, pero con los equipamientos e instalaciones que exige la normativa sanitaria actual.”
           </motion.p>
           <motion.p
             initial={{ transform: "translateY(16px)", opacity: 0 }}
-            animate={{ transform: "translateY(0px)", opacity: 1 }}
+            whileInView={{ transform: "translateY(0px)", opacity: 1 }}
+            viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.6, delay: 0.35, ease }}
             className="mt-6"
-            style={{ color: "#8C7B6A", fontFamily: "var(--font-lora)", fontSize: "0.9rem" }}
+            style={{ color: "var(--color-gris)", fontFamily: "var(--font-body)", fontSize: "0.9rem" }}
           >
             S.A.T. Cañada Real Soriana · Madridejos, Toledo
           </motion.p>
@@ -149,7 +142,7 @@ export default function ElaboracionContent() {
       <section
         ref={pasoRef}
         className="py-24 lg:py-32 px-6"
-        style={{ background: "#efe8d8" }}
+        style={{ background: "var(--color-azulejo)" }}
       >
         <div className="max-w-6xl mx-auto">
           <motion.div
@@ -158,17 +151,11 @@ export default function ElaboracionContent() {
             transition={{ duration: 0.6, ease }}
             className="mb-16"
           >
-            <p
-              className="text-xs tracking-widest uppercase mb-4"
-              style={{ color: "#C17D3C", fontFamily: "var(--font-lora)" }}
-            >
-              El proceso
-            </p>
             <h2
               style={{
-                fontFamily: "var(--font-cormorant)",
+                fontFamily: "var(--font-display)",
                 fontSize: "clamp(2rem, 3.5vw, 3rem)",
-                color: "#231A0E",
+                color: "var(--color-verde)",
                 fontWeight: 400,
               }}
             >
@@ -185,15 +172,15 @@ export default function ElaboracionContent() {
                 transition={{ duration: 0.6, delay: i * 0.07, ease }}
                 className="flex gap-8 py-10"
                 style={{
-                  borderBottom: i < pasos.length - 1 ? "1px solid rgba(193,125,60,0.2)" : "none",
+                  borderBottom: i < pasos.length - 1 ? "1px solid rgba(201,162,74,0.2)" : "none",
                 }}
               >
                 <div className="flex-shrink-0 w-16">
                   <span
                     style={{
-                      fontFamily: "var(--font-cormorant)",
+                      fontFamily: "var(--font-display)",
                       fontSize: "2.5rem",
-                      color: "rgba(193,125,60,0.35)",
+                      color: "rgba(201,162,74,0.35)",
                       fontWeight: 600,
                       fontStyle: "italic",
                       lineHeight: 1,
@@ -206,16 +193,16 @@ export default function ElaboracionContent() {
                   <h3
                     className="mb-3"
                     style={{
-                      fontFamily: "var(--font-cormorant)",
+                      fontFamily: "var(--font-display)",
                       fontSize: "1.5rem",
-                      color: "#231A0E",
+                      color: "var(--color-verde)",
                       fontWeight: 500,
                     }}
                   >
                     {p.title}
                   </h3>
                   <p
-                    style={{ color: "#5a3f25", fontFamily: "var(--font-lora)", fontSize: "0.9rem", lineHeight: 1.75, maxWidth: "52rem" }}
+                    style={{ color: "var(--color-tinta)", fontFamily: "var(--font-body)", fontSize: "0.9rem", lineHeight: 1.75, maxWidth: "52rem" }}
                   >
                     {p.text}
                   </p>
@@ -230,7 +217,7 @@ export default function ElaboracionContent() {
       <section
         ref={varRef}
         className="py-24 lg:py-32 px-6"
-        style={{ background: "#F7F0E3" }}
+        style={{ background: "var(--color-marmol)" }}
       >
         <div className="max-w-6xl mx-auto">
           <motion.div
@@ -239,17 +226,11 @@ export default function ElaboracionContent() {
             transition={{ duration: 0.6, ease }}
             className="mb-14"
           >
-            <p
-              className="text-xs tracking-widest uppercase mb-4"
-              style={{ color: "#C17D3C", fontFamily: "var(--font-lora)" }}
-            >
-              Por tiempo de maduración
-            </p>
             <h2
               style={{
-                fontFamily: "var(--font-cormorant)",
+                fontFamily: "var(--font-display)",
                 fontSize: "clamp(2rem, 3.5vw, 3rem)",
-                color: "#231A0E",
+                color: "var(--color-verde)",
                 fontWeight: 400,
               }}
             >
@@ -265,27 +246,27 @@ export default function ElaboracionContent() {
                 animate={varInView ? { transform: "translateY(0px)", opacity: 1 } : {}}
                 transition={{ duration: 0.6, delay: 0.1 + i * 0.09, ease }}
                 className="p-8"
-                style={{ background: "#efe8d8", border: "1px solid rgba(193,125,60,0.2)" }}
+                style={{ background: "var(--color-azulejo)", border: "1px solid rgba(201,162,74,0.2)" }}
               >
                 <p
                   className="text-xs tracking-widest uppercase mb-3"
-                  style={{ color: "#C17D3C", fontFamily: "var(--font-lora)" }}
+                  style={{ color: "var(--color-oro-tinta)", fontFamily: "var(--font-body)" }}
                 >
                   {v.meses}
                 </p>
                 <h3
                   className="mb-4"
                   style={{
-                    fontFamily: "var(--font-cormorant)",
+                    fontFamily: "var(--font-display)",
                     fontSize: "1.8rem",
-                    color: "#231A0E",
+                    color: "var(--color-verde)",
                     fontWeight: 400,
                   }}
                 >
                   {v.label}
                 </h3>
                 <p
-                  style={{ color: "#5a3f25", fontFamily: "var(--font-lora)", fontSize: "0.88rem", lineHeight: 1.7 }}
+                  style={{ color: "var(--color-tinta)", fontFamily: "var(--font-body)", fontSize: "0.88rem", lineHeight: 1.7 }}
                 >
                   {v.desc}
                 </p>
@@ -299,7 +280,7 @@ export default function ElaboracionContent() {
       <section
         ref={calRef}
         className="py-24 px-6"
-        style={{ background: "#231A0E" }}
+        style={{ background: "var(--color-verde)" }}
       >
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
           <motion.div
@@ -307,18 +288,12 @@ export default function ElaboracionContent() {
             animate={calInView ? { transform: "translateY(0px)", opacity: 1 } : {}}
             transition={{ duration: 0.6, ease }}
           >
-            <p
-              className="text-xs tracking-widest uppercase mb-4"
-              style={{ color: "#C17D3C", fontFamily: "var(--font-lora)" }}
-            >
-              Calidad garantizada
-            </p>
             <h2
               className="mb-6"
               style={{
-                fontFamily: "var(--font-cormorant)",
+                fontFamily: "var(--font-display)",
                 fontSize: "clamp(1.8rem, 3vw, 2.8rem)",
-                color: "#F7F0E3",
+                color: "var(--color-marmol)",
                 fontWeight: 400,
                 lineHeight: 1.2,
               }}
@@ -326,7 +301,7 @@ export default function ElaboracionContent() {
               Cada rueda, trazable y certificada
             </h2>
             <p
-              style={{ color: "rgba(247,240,227,0.75)", fontFamily: "var(--font-lora)", fontSize: "0.92rem", lineHeight: 1.75 }}
+              style={{ color: "rgba(243,242,238,0.75)", fontFamily: "var(--font-body)", fontSize: "0.92rem", lineHeight: 1.75 }}
             >
               Cada queso lleva una placa de caseína numerada que lo identifica de forma individual. Antes de salir al mercado, cada lote es analizado y autorizado por el Consejo Regulador de la DOP Manchego. Además, aplicamos control interno de puntos críticos en todas las fases del proceso.
             </p>
@@ -350,16 +325,16 @@ export default function ElaboracionContent() {
                 animate={calInView ? { transform: "translateY(0px)", opacity: 1 } : {}}
                 transition={{ duration: 0.5, delay: 0.2 + i * 0.07, ease }}
                 className="p-5"
-                style={{ background: "rgba(247,240,227,0.06)", border: "1px solid rgba(247,240,227,0.12)" }}
+                style={{ background: "rgba(243,242,238,0.06)", border: "1px solid rgba(243,242,238,0.12)" }}
               >
                 <p
                   className="mb-1"
-                  style={{ fontFamily: "var(--font-cormorant)", fontSize: "1.1rem", color: "#C17D3C", fontWeight: 500 }}
+                  style={{ fontFamily: "var(--font-display)", fontSize: "1.1rem", color: "var(--color-oro)", fontWeight: 500 }}
                 >
                   {item.label}
                 </p>
                 <p
-                  style={{ fontFamily: "var(--font-lora)", fontSize: "0.78rem", color: "rgba(247,240,227,0.55)", lineHeight: 1.5 }}
+                  style={{ fontFamily: "var(--font-body)", fontSize: "0.78rem", color: "rgba(243,242,238,0.55)", lineHeight: 1.5 }}
                 >
                   {item.desc}
                 </p>
@@ -370,20 +345,14 @@ export default function ElaboracionContent() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 px-6 text-center" style={{ background: "#efe8d8" }}>
+      <section className="py-24 px-6 text-center" style={{ background: "var(--color-azulejo)" }}>
         <div className="max-w-xl mx-auto">
-          <p
-            className="text-xs tracking-widest uppercase mb-4"
-            style={{ color: "#C17D3C", fontFamily: "var(--font-lora)" }}
-          >
-            El resultado
-          </p>
           <h2
             className="mb-8"
             style={{
-              fontFamily: "var(--font-cormorant)",
+              fontFamily: "var(--font-display)",
               fontSize: "clamp(1.8rem, 3.5vw, 3rem)",
-              color: "#231A0E",
+              color: "var(--color-verde)",
               fontWeight: 400,
               fontStyle: "italic",
             }}
@@ -394,7 +363,7 @@ export default function ElaboracionContent() {
             <Button
               asChild
               size="lg"
-              style={{ background: "#C17D3C", color: "#F7F0E3", fontFamily: "var(--font-lora)" }}
+              style={{ background: "var(--color-oro)", color: "var(--color-verde-hondo)", fontFamily: "var(--font-body)" }}
               className="hover:opacity-90 transition-opacity"
             >
               <Link href="/quesos/el-cordel">El Cordel DOP</Link>
@@ -403,7 +372,7 @@ export default function ElaboracionContent() {
               asChild
               size="lg"
               variant="outline"
-              style={{ borderColor: "rgba(35,26,14,0.3)", color: "#231A0E", fontFamily: "var(--font-lora)" }}
+              style={{ borderColor: "rgba(31,59,45,0.3)", color: "var(--color-verde)", fontFamily: "var(--font-body)" }}
               className="hover:bg-black/5 transition-colors"
             >
               <Link href="/quesos/el-consuelo">El Consuelo</Link>

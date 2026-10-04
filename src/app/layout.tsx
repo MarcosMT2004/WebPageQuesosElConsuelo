@@ -1,24 +1,31 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Lora } from "next/font/google";
+import { Bodoni_Moda, Barlow_Condensed, Libre_Franklin } from "next/font/google";
 import "./globals.css";
 import WhatsAppButton from "@/components/whatsapp-button";
 import CookieBanner from "@/components/cookie-banner";
 import ScrollToTop from "@/components/scroll-to-top";
 import Analytics from "@/components/analytics";
+import MotionProvider from "@/components/motion-provider";
 
-const cormorant = Cormorant_Garamond({
+// Rótulo de tienda en pan de oro
+const bodoni = Bodoni_Moda({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
   style: ["normal", "italic"],
-  variable: "--font-cormorant",
+  variable: "--font-bodoni",
   display: "swap",
 });
 
-const lora = Lora({
+// Etiquetas esmaltadas, precios y cifras de libreta
+const barlow = Barlow_Condensed({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
-  style: ["normal", "italic"],
-  variable: "--font-lora",
+  variable: "--font-barlow",
+  display: "swap",
+});
+
+const franklin = Libre_Franklin({
+  subsets: ["latin"],
+  variable: "--font-franklin",
   display: "swap",
 });
 
@@ -38,7 +45,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Quesos El Consuelo · Sabor de La Mancha",
     description:
-      "Queso manchego artesanal con DOP. 88 años de tradición, 1.200 ovejas manchegas propias.",
+      "Queso manchego artesanal con DOP. 88 años de tradición, 2.200 ovejas manchegas propias.",
     type: "website",
     locale: "es_ES",
     images: [
@@ -57,7 +64,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es" className={`${cormorant.variable} ${lora.variable} h-full antialiased`}>
+    <html lang="es" className={`${bodoni.variable} ${barlow.variable} ${franklin.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
         <script
           type="application/ld+json"
@@ -91,10 +98,12 @@ export default function RootLayout({
             }),
           }}
         />
-        {children}
-        <ScrollToTop />
-        <WhatsAppButton />
-        <CookieBanner />
+        <MotionProvider>
+          {children}
+          <ScrollToTop />
+          <WhatsAppButton />
+          <CookieBanner />
+        </MotionProvider>
         <Analytics />
       </body>
     </html>

@@ -21,7 +21,7 @@ Documento de ideas pendientes de aprobar antes de implementar.
 
 ---
 
-## 2. BreadcrumbList Schema — Media prioridad
+## 2. BreadcrumbList Schema — ✅ Hecho (breadcrumb.tsx)
 
 **Qué es:** JSON-LD invisible (para Google) que describe la jerarquía de navegación de cada página.
 
@@ -53,7 +53,7 @@ Documento de ideas pendientes de aprobar antes de implementar.
 
 ---
 
-## 5. Botón "volver arriba" — Baja prioridad
+## 5. Botón "volver arriba" — ✅ Hecho (scroll-to-top.tsx)
 
 **Qué es:** Un pequeño botón que aparece al bajar en páginas largas y lleva al usuario al inicio.
 
@@ -63,7 +63,7 @@ Documento de ideas pendientes de aprobar antes de implementar.
 
 ---
 
-## 6. Skip-to-content para accesibilidad — Baja prioridad
+## 6. Skip-to-content para accesibilidad — ✅ Hecho (nav.tsx)
 
 **Qué es:** Un enlace invisible que aparece al pulsar Tab, que lleva directamente al contenido principal saltando la navegación.
 

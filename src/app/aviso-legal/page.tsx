@@ -17,17 +17,17 @@ export default function AvisoLegalPage() {
 
       <article
         className="px-6 py-16"
-        style={{ background: "#F7F0E3", minHeight: "60vh" }}
+        style={{ background: "var(--color-marmol)", minHeight: "60vh" }}
       >
         <div className="max-w-3xl mx-auto">
           <h1
             className="mb-10"
             style={{
-              fontFamily: "var(--font-cormorant)",
+              fontFamily: "var(--font-display)",
               fontSize: "clamp(2rem, 5vw, 3.5rem)",
               fontWeight: 400,
               fontStyle: "italic",
-              color: "#231A0E",
+              color: "var(--color-verde)",
             }}
           >
             Aviso Legal
@@ -35,16 +35,16 @@ export default function AvisoLegalPage() {
 
           <div
             className="space-y-8 text-sm leading-relaxed"
-            style={{ fontFamily: "var(--font-lora)", color: "#231A0E" }}
+            style={{ fontFamily: "var(--font-body)", color: "var(--color-verde)" }}
           >
             <section>
               <h2
                 className="mb-3"
                 style={{
-                  fontFamily: "var(--font-cormorant)",
+                  fontFamily: "var(--font-display)",
                   fontSize: "1.4rem",
                   fontStyle: "italic",
-                  color: "#7A3B28",
+                  color: "var(--color-cordel)",
                 }}
               >
                 1. Identificación del titular
@@ -54,7 +54,7 @@ export default function AvisoLegalPage() {
                 Sociedad de la Información y de Comercio Electrónico (LSSI-CE), se
                 facilitan los siguientes datos de identificación:
               </p>
-              <ul className="space-y-1 pl-4" style={{ borderLeft: "2px solid #C17D3C" }}>
+              <ul className="space-y-1 pl-4" style={{ borderLeft: "2px solid var(--color-oro)" }}>
                 <li className="pl-3"><strong>Denominación social:</strong> S.A.T. Cañada Real Soriana</li>
                 <li className="pl-3"><strong>Nombre comercial:</strong> Quesos El Consuelo</li>
                 <li className="pl-3"><strong>Domicilio:</strong> Ctra. Toledo-Alcázar de San Juan, km 69,200, Madridejos (Toledo)</li>
@@ -67,10 +67,10 @@ export default function AvisoLegalPage() {
               <h2
                 className="mb-3"
                 style={{
-                  fontFamily: "var(--font-cormorant)",
+                  fontFamily: "var(--font-display)",
                   fontSize: "1.4rem",
                   fontStyle: "italic",
-                  color: "#7A3B28",
+                  color: "var(--color-cordel)",
                 }}
               >
                 2. Condiciones de uso
@@ -91,10 +91,10 @@ export default function AvisoLegalPage() {
               <h2
                 className="mb-3"
                 style={{
-                  fontFamily: "var(--font-cormorant)",
+                  fontFamily: "var(--font-display)",
                   fontSize: "1.4rem",
                   fontStyle: "italic",
-                  color: "#7A3B28",
+                  color: "var(--color-cordel)",
                 }}
               >
                 3. Propiedad intelectual e industrial
@@ -116,10 +116,10 @@ export default function AvisoLegalPage() {
               <h2
                 className="mb-3"
                 style={{
-                  fontFamily: "var(--font-cormorant)",
+                  fontFamily: "var(--font-display)",
                   fontSize: "1.4rem",
                   fontStyle: "italic",
-                  color: "#7A3B28",
+                  color: "var(--color-cordel)",
                 }}
               >
                 4. Limitación de responsabilidad
@@ -139,10 +139,10 @@ export default function AvisoLegalPage() {
               <h2
                 className="mb-3"
                 style={{
-                  fontFamily: "var(--font-cormorant)",
+                  fontFamily: "var(--font-display)",
                   fontSize: "1.4rem",
                   fontStyle: "italic",
-                  color: "#7A3B28",
+                  color: "var(--color-cordel)",
                 }}
               >
                 5. Ley aplicable y jurisdicción
@@ -158,7 +158,7 @@ export default function AvisoLegalPage() {
 
             <p
               className="pt-4 text-xs"
-              style={{ color: "#8C7B6A", borderTop: "1px solid rgba(193,125,60,0.2)" }}
+              style={{ color: "var(--color-gris)", borderTop: "1px solid rgba(201,162,74,0.2)" }}
             >
               Última actualización: septiembre de 2025
             </p>

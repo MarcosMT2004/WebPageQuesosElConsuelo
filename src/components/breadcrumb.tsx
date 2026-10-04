@@ -38,38 +38,38 @@ export default function Breadcrumb({ items }: { items: BreadcrumbItem[] }) {
       className="px-6"
       style={{
         paddingTop: "64px", // height of fixed nav
-        background: "#F7F0E3",
-        borderBottom: "1px solid rgba(193,125,60,0.15)",
+        background: "var(--color-marmol)",
+        borderBottom: "1px solid rgba(201,162,74,0.15)",
       }}
     >
       <ol
         className="max-w-6xl mx-auto flex items-center gap-2 py-3"
-        style={{ fontFamily: "var(--font-lora)", fontSize: "0.75rem" }}
+        style={{ fontFamily: "var(--font-body)", fontSize: "0.75rem" }}
       >
         <li>
           <Link
             href="/"
-            style={{ color: "#8C7B6A", transition: "color 150ms" }}
-            onMouseEnter={(e) => (e.currentTarget.style.color = "#C17D3C")}
-            onMouseLeave={(e) => (e.currentTarget.style.color = "#8C7B6A")}
+            style={{ color: "var(--color-gris)", transition: "color 150ms" }}
+            onMouseEnter={(e) => (e.currentTarget.style.color = "var(--color-oro)")}
+            onMouseLeave={(e) => (e.currentTarget.style.color = "var(--color-gris)")}
           >
             Inicio
           </Link>
         </li>
         {items.map((item, i) => (
           <li key={i} className="flex items-center gap-2">
-            <span style={{ color: "rgba(193,125,60,0.45)" }} aria-hidden>/</span>
+            <span style={{ color: "rgba(201,162,74,0.45)" }} aria-hidden>/</span>
             {item.href ? (
               <Link
                 href={item.href}
-                style={{ color: "#8C7B6A", transition: "color 150ms" }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = "#C17D3C")}
-                onMouseLeave={(e) => (e.currentTarget.style.color = "#8C7B6A")}
+                style={{ color: "var(--color-gris)", transition: "color 150ms" }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = "var(--color-oro)")}
+                onMouseLeave={(e) => (e.currentTarget.style.color = "var(--color-gris)")}
               >
                 {item.label}
               </Link>
             ) : (
-              <span style={{ color: "#231A0E" }}>{item.label}</span>
+              <span style={{ color: "var(--color-verde)" }}>{item.label}</span>
             )}
           </li>
         ))}

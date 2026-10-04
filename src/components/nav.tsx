@@ -14,7 +14,7 @@ const ease = [0.23, 1, 0.32, 1] as const;
 const navLinks = [
   { label: "La Empresa", href: "/empresa" },
   { label: "La Elaboración", href: "/elaboracion" },
-  { label: "El Queso", href: "/queso" },
+  { label: "El Manchego", href: "/queso" },
 ];
 
 const quesosLines = [
@@ -37,19 +37,28 @@ export default function Nav() {
 
   const isHome = pathname === "/";
   const showSolid = scrolled || !isHome;
-  const linkColor = showSolid ? "#231A0E" : "#F7F0E3";
+  const linkColor = showSolid ? "var(--color-verde)" : "var(--color-marmol)";
+  // El oro solo se lee sobre verde; sobre la barra clara va el oro oscuro.
+  const accent = showSolid ? "var(--color-oro-tinta)" : "var(--color-oro)";
   const isQuesosActive = pathname.startsWith("/quesos");
 
   return (
+    <>
+    <a
+      href="#contenido"
+      className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[60] focus:px-4 focus:py-2 focus:bg-verde focus:text-marmol"
+    >
+      Saltar al contenido
+    </a>
     <motion.header
       className="fixed top-0 inset-x-0 z-50"
       initial={{ transform: "translateY(-100%)", opacity: 0 }}
       animate={{ transform: "translateY(0px)", opacity: 1 }}
       transition={{ duration: 0.4, ease }}
       style={{
-        background: showSolid ? "rgba(247, 240, 227, 0.96)" : "transparent",
+        background: showSolid ? "rgba(243,242,238, 0.96)" : "transparent",
         backdropFilter: showSolid ? "blur(8px)" : "none",
-        borderBottom: showSolid ? "1px solid rgba(193, 125, 60, 0.2)" : "none",
+        borderBottom: showSolid ? "1px solid rgba(201,162,74, 0.2)" : "none",
         transition: "background 300ms, border-color 300ms, backdrop-filter 300ms",
       }}
     >
@@ -67,20 +76,20 @@ export default function Nav() {
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-8" aria-label="Navegación principal">
           {navLinks.map((l) => {
-            const isActive = pathname.startsWith(l.href);
+            const isActive = pathname === l.href || pathname.startsWith(l.href + "/");
             return (
               <Link
                 key={l.href}
                 href={l.href}
                 className="text-sm"
                 style={{
-                  color: isActive ? "#C17D3C" : linkColor,
-                  fontFamily: "var(--font-lora)",
+                  color: isActive ? accent : linkColor,
+                  fontFamily: "var(--font-body)",
                   transition: "color 150ms",
                 }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = "#C17D3C")}
+                onMouseEnter={(e) => (e.currentTarget.style.color = accent)}
                 onMouseLeave={(e) =>
-                  (e.currentTarget.style.color = isActive ? "#C17D3C" : linkColor)
+                  (e.currentTarget.style.color = isActive ? accent : linkColor)
                 }
               >
                 {l.label}
@@ -97,8 +106,8 @@ export default function Nav() {
             <button
               className="flex items-center gap-1 text-sm"
               style={{
-                color: quesosOpen || isQuesosActive ? "#C17D3C" : linkColor,
-                fontFamily: "var(--font-lora)",
+                color: quesosOpen || isQuesosActive ? accent : linkColor,
+                fontFamily: "var(--font-body)",
                 background: "none",
                 border: "none",
                 cursor: "pointer",
@@ -130,9 +139,9 @@ export default function Nav() {
                 >
                   <div
                     style={{
-                      background: "#F7F0E3",
-                      border: "1px solid rgba(193,125,60,0.25)",
-                      boxShadow: "0 8px 32px rgba(35,26,14,0.12)",
+                      background: "var(--color-marmol)",
+                      border: "1px solid rgba(201,162,74,0.25)",
+                      boxShadow: "0 8px 32px rgba(31,59,45,0.12)",
                     }}
                   >
                     {quesosLines.map((q, i) => (
@@ -141,12 +150,12 @@ export default function Nav() {
                         href={q.href}
                         className="block px-5 py-3.5"
                         style={{
-                          borderBottom: i < quesosLines.length - 1 ? "1px solid rgba(193,125,60,0.12)" : "none",
+                          borderBottom: i < quesosLines.length - 1 ? "1px solid rgba(201,162,74,0.12)" : "none",
                           transition: "background 150ms",
                           textDecoration: "none",
                         }}
                         onMouseEnter={(e) => {
-                          (e.currentTarget as HTMLElement).style.background = "rgba(193,125,60,0.07)";
+                          (e.currentTarget as HTMLElement).style.background = "rgba(201,162,74,0.07)";
                         }}
                         onMouseLeave={(e) => {
                           (e.currentTarget as HTMLElement).style.background = "transparent";
@@ -154,19 +163,19 @@ export default function Nav() {
                       >
                         <span
                           className="flex items-center gap-2"
-                          style={{ color: "#231A0E", fontFamily: "var(--font-cormorant)", fontSize: "1.05rem", fontWeight: 500 }}
+                          style={{ color: "var(--color-verde)", fontFamily: "var(--font-display)", fontSize: "1.05rem", fontWeight: 500 }}
                         >
                           {q.label}
                           {q.dop && (
                             <span
                               className="px-1.5 py-px"
                               style={{
-                                background: "#C17D3C",
-                                color: "#F7F0E3",
+                                background: "var(--color-oro)",
+                                color: "var(--color-verde-hondo)",
                                 fontSize: "0.55rem",
                                 letterSpacing: "0.1em",
                                 textTransform: "uppercase",
-                                fontFamily: "var(--font-lora)",
+                                fontFamily: "var(--font-body)",
                               }}
                             >
                               DOP
@@ -175,7 +184,7 @@ export default function Nav() {
                         </span>
                         <span
                           className="block text-xs mt-0.5"
-                          style={{ color: "#8C7B6A", fontFamily: "var(--font-lora)" }}
+                          style={{ color: "var(--color-gris)", fontFamily: "var(--font-body)" }}
                         >
                           {q.desc}
                         </span>
@@ -190,7 +199,7 @@ export default function Nav() {
           <Button
             asChild
             size="sm"
-            style={{ background: "#C17D3C", color: "#F7F0E3" }}
+            style={{ background: "var(--color-oro)", color: "var(--color-verde-hondo)" }}
             className="hover:opacity-90 transition-opacity"
           >
             <Link href="/contacto">Contacto</Link>
@@ -203,14 +212,14 @@ export default function Nav() {
             <button
               className="md:hidden p-2 rounded-md"
               aria-label="Abrir menú"
-              style={{ color: showSolid ? "#231A0E" : "#F7F0E3" }}
+              style={{ color: showSolid ? "var(--color-verde)" : "var(--color-marmol)" }}
             >
               <Menu size={22} />
             </button>
           </SheetTrigger>
           <SheetContent
             side="right"
-            style={{ background: "#F7F0E3", borderLeft: "1px solid rgba(193,125,60,0.2)" }}
+            style={{ background: "var(--color-marmol)", borderLeft: "1px solid rgba(201,162,74,0.2)" }}
           >
             <div className="flex flex-col gap-6 pt-12">
               {navLinks.map((l) => (
@@ -219,9 +228,9 @@ export default function Nav() {
                   href={l.href}
                   onClick={() => setOpen(false)}
                   className="text-2xl"
-                  style={{ fontFamily: "var(--font-cormorant)", color: "#231A0E", fontWeight: 500, transition: "color 150ms" }}
-                  onMouseEnter={(e) => (e.currentTarget.style.color = "#C17D3C")}
-                  onMouseLeave={(e) => (e.currentTarget.style.color = "#231A0E")}
+                  style={{ fontFamily: "var(--font-display)", color: "var(--color-verde)", fontWeight: 500, transition: "color 150ms" }}
+                  onMouseEnter={(e) => (e.currentTarget.style.color = "var(--color-oro-tinta)")}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = "var(--color-verde)")}
                 >
                   {l.label}
                 </Link>
@@ -230,7 +239,7 @@ export default function Nav() {
               <div>
                 <p
                   className="text-xs tracking-widest uppercase mb-3"
-                  style={{ color: "#8C7B6A", fontFamily: "var(--font-lora)" }}
+                  style={{ color: "var(--color-gris)", fontFamily: "var(--font-body)" }}
                 >
                   Nuestros Quesos
                 </p>
@@ -240,15 +249,15 @@ export default function Nav() {
                     href={q.href}
                     onClick={() => setOpen(false)}
                     className="block text-xl py-2"
-                    style={{ fontFamily: "var(--font-cormorant)", color: "#231A0E", fontWeight: 500, transition: "color 150ms" }}
-                    onMouseEnter={(e) => (e.currentTarget.style.color = "#C17D3C")}
-                    onMouseLeave={(e) => (e.currentTarget.style.color = "#231A0E")}
+                    style={{ fontFamily: "var(--font-display)", color: "var(--color-verde)", fontWeight: 500, transition: "color 150ms" }}
+                    onMouseEnter={(e) => (e.currentTarget.style.color = "var(--color-oro-tinta)")}
+                    onMouseLeave={(e) => (e.currentTarget.style.color = "var(--color-verde)")}
                   >
                     {q.label}
                     {q.dop && (
                       <span
                         className="ml-2 px-1.5 py-px text-xs"
-                        style={{ background: "#C17D3C", color: "#F7F0E3", fontSize: "0.55rem", letterSpacing: "0.08em", textTransform: "uppercase" }}
+                        style={{ background: "var(--color-oro)", color: "var(--color-verde-hondo)", fontSize: "0.55rem", letterSpacing: "0.08em", textTransform: "uppercase" }}
                       >
                         DOP
                       </span>
@@ -259,7 +268,7 @@ export default function Nav() {
 
               <Button
                 asChild
-                style={{ background: "#C17D3C", color: "#F7F0E3", width: "fit-content" }}
+                style={{ background: "var(--color-oro)", color: "var(--color-verde-hondo)", width: "fit-content" }}
               >
                 <Link href="/contacto" onClick={() => setOpen(false)}>Contacto</Link>
               </Button>
@@ -268,5 +277,8 @@ export default function Nav() {
         </Sheet>
       </div>
     </motion.header>
+    {/* Destino del enlace de salto: primer punto del contenido tras la cabecera fija */}
+    <div id="contenido" tabIndex={-1} className="outline-none" />
+    </>
   );
 }
