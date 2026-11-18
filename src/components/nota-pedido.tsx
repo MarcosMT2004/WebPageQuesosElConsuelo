@@ -3,7 +3,7 @@
 import { useId, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Minus, Plus, X } from "lucide-react";
-import { LINEAS, mensajePedido, type LineaPedido } from "@/lib/quesos";
+import { LINEAS, mensajePedido, type Linea, type LineaPedido } from "@/lib/quesos";
 import { WA_URL } from "@/lib/contacto";
 import { WhatsAppIcon } from "@/components/whatsapp-button";
 
@@ -54,7 +54,13 @@ function Opciones({
   );
 }
 
-export default function NotaPedido({ lineaInicial }: { lineaInicial?: string }) {
+export default function NotaPedido({
+  lineaInicial,
+  onLinea,
+}: {
+  lineaInicial?: string;
+  onLinea?: (l: Linea) => void; // avisa al escaparate para que cambie foto y rótulo
+}) {
   const uid = useId();
   const inicial = LINEAS.find((l) => l.slug === lineaInicial) ?? LINEAS[0];
 
@@ -72,6 +78,7 @@ export default function NotaPedido({ lineaInicial }: { lineaInicial?: string }) 
   function elegirLinea(n: string) {
     const l = LINEAS.find((x) => x.nombre === n)!;
     setLinea(n);
+    onLinea?.(l);
     setVariedad(l.variedades[0].nombre);
     setFormato(l.variedades[0].formatos[0]);
   }

@@ -1,9 +1,11 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "motion/react";
 import Image from "next/image";
 import { ArrowDown } from "lucide-react";
 import NotaPedido from "@/components/nota-pedido";
+import { LINEAS } from "@/lib/quesos";
 
 const ease = [0.23, 1, 0.32, 1] as const;
 
@@ -12,6 +14,7 @@ const moldura =
   "shadow-[inset_0_0_0_1px_rgba(201,162,74,0.35),inset_0_0_0_7px_var(--color-verde),inset_0_0_0_8px_rgba(0,0,0,0.28)]";
 
 export default function Hero() {
+  const [l, setL] = useState(LINEAS[0]);
   return (
     <section className="relative bg-verde pt-16 text-marmol">
       <div className={`mx-auto max-w-7xl px-4 sm:px-6 pb-10 pt-6 lg:pt-8 ${moldura}`}>
@@ -37,8 +40,9 @@ export default function Hero() {
             <div className="relative bg-verde-hondo p-2 sm:p-2.5">
               <div className="relative aspect-[4/3] sm:aspect-[2/1] overflow-hidden">
                 <Image
-                  src="/images/slide6.jpg"
-                  alt="Tres ruedas de queso manchego El Consuelo con cuñas cortadas sobre tabla de madera"
+                  key={l.foto}
+                  src={l.foto}
+                  alt={`Quesos de la línea ${l.nombre}`}
                   fill
                   priority
                   sizes="(max-width: 1024px) 100vw, 58vw"
@@ -56,7 +60,7 @@ export default function Hero() {
               </div>
               {/* Etiqueta esmaltada colgada del escaparate */}
               <p className="absolute -bottom-4 left-5 sm:left-8 border-2 border-verde bg-marmol px-3 py-1 font-label text-[0.8rem] sm:text-[0.9rem] font-semibold uppercase tracking-[0.14em] text-verde shadow-[0_4px_10px_rgba(0,0,0,0.35)]">
-                Leche cruda · ovejas propias
+                {l.nombre} · {l.rotulo}
               </p>
             </div>
           </div>
@@ -68,7 +72,7 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.35, ease }}
             className="lg:col-start-2 lg:row-start-1 lg:row-span-2 lg:-mt-2"
           >
-            <NotaPedido />
+            <NotaPedido onLinea={setL} />
           </motion.div>
 
           <div className="lg:col-start-1 lg:row-start-2">
